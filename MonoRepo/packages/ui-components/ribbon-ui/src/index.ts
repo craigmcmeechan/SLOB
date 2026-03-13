@@ -1,6 +1,6 @@
 /**
  * Ribbon UI Component Suite
- * Main export file for Phase 1: Foundation
+ * Main export file - Phase 1 & 2: Foundation + Core Components
  */
 
 // ============================================================================
@@ -8,6 +8,7 @@
 // ============================================================================
 
 export * from './components/base';
+export * from './components/index';
 
 // ============================================================================
 // TYPES
@@ -112,6 +113,8 @@ import './styles/themes/accessible.css';
 // VERSION INFO
 // ============================================================================
 
-export const VERSION = '0.1.0';
+export const VERSION = '0.2.0';
 export const LIBRARY_NAME = '@ribbon-ui/core';
-export const PHASE = 'Phase 1: Foundation';
+export const PHASE = 'Phase 2: Core Components';
+export const PHASE_1_COMPLETE = true;
+export const PHASE_2_IN_PROGRESS = true;

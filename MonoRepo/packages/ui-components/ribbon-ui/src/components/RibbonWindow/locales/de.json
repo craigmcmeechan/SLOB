@@ -1,0 +1,15 @@
+{
+  "title": "Fenster",
+  "minimize": "Minimieren",
+  "maximize": "Maximieren",
+  "restore": "Wiederherstellen",
+  "close": "Schließen",
+  "move": "Fenster verschieben",
+  "resize": "Fenster vergrößern",
+  "modal": "Modale Dialog",
+  "dialog": "Dialog",
+  "popup": "Popup-Fenster",
+  "child": "Unterfenster",
+  "confirmClose": "Möchten Sie dieses Fenster wirklich schließen?",
+  "unsavedChanges": "Sie haben ungespeicherte Änderungen. Trotzdem schließen?"
+}

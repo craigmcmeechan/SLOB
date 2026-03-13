@@ -1,0 +1,291 @@
+/* ============================================================================
+   Button Component Styles
+   ============================================================================ */
+
+.ribbon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ribbon-font-family-base);
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: var(--ribbon-font-weight-medium);
+  border: var(--ribbon-border-width-1) solid transparent;
+  border-radius: var(--ribbon-border-radius-md);
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   Sizes
+   ============================================================================ */
+
+.ribbon-button--small {
+  height: var(--ribbon-size-button-sm);
+  padding: 0 var(--ribbon-space-2);
+  gap: var(--ribbon-space-1);
+}
+
+.ribbon-button--medium {
+  height: var(--ribbon-size-button-md);
+  padding: 0 var(--ribbon-space-3);
+  gap: var(--ribbon-space-2);
+}
+
+.ribbon-button--large {
+  height: var(--ribbon-size-button-lg);
+  padding: 0 var(--ribbon-space-4);
+  gap: var(--ribbon-space-3);
+}
+
+/* ============================================================================
+   Variants - Primary
+   ============================================================================ */
+
+.ribbon-button--primary {
+  background-color: var(--ribbon-primary);
+  color: var(--ribbon-text-inverse);
+  border-color: var(--ribbon-primary);
+}
+
+.ribbon-button--primary:hover:not(:disabled) {
+  background-color: var(--ribbon-primary-hover);
+  border-color: var(--ribbon-primary-hover);
+  box-shadow: var(--ribbon-shadow-md);
+}
+
+.ribbon-button--primary:active:not(:disabled) {
+  background-color: var(--ribbon-primary-active);
+  border-color: var(--ribbon-primary-active);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================================
+   Variants - Secondary
+   ============================================================================ */
+
+.ribbon-button--secondary {
+  background-color: var(--ribbon-bg-secondary);
+  color: var(--ribbon-text-primary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-button--secondary:hover:not(:disabled) {
+  background-color: var(--ribbon-bg-hover);
+  border-color: var(--ribbon-secondary-hover);
+  box-shadow: var(--ribbon-shadow-md);
+}
+
+.ribbon-button--secondary:active:not(:disabled) {
+  background-color: var(--ribbon-bg-active);
+  border-color: var(--ribbon-border-color-dark);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================================
+   Variants - Danger
+   ============================================================================ */
+
+.ribbon-button--danger {
+  background-color: var(--ribbon-error);
+  color: var(--ribbon-text-inverse);
+  border-color: var(--ribbon-error);
+}
+
+.ribbon-button--danger:hover:not(:disabled) {
+  background-color: var(--ribbon-error-hover);
+  border-color: var(--ribbon-error-hover);
+  box-shadow: var(--ribbon-shadow-md);
+}
+
+.ribbon-button--danger:active:not(:disabled) {
+  background-color: #a93226;
+  border-color: #a93226;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================================
+   Variants - Success
+   ============================================================================ */
+
+.ribbon-button--success {
+  background-color: var(--ribbon-success);
+  color: var(--ribbon-text-inverse);
+  border-color: var(--ribbon-success);
+}
+
+.ribbon-button--success:hover:not(:disabled) {
+  background-color: var(--ribbon-success-hover);
+  border-color: var(--ribbon-success-hover);
+  box-shadow: var(--ribbon-shadow-md);
+}
+
+.ribbon-button--success:active:not(:disabled) {
+  background-color: #1e8449;
+  border-color: #1e8449;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================================
+   Variants - Ghost
+   ============================================================================ */
+
+.ribbon-button--ghost {
+  background-color: transparent;
+  color: var(--ribbon-text-primary);
+  border-color: transparent;
+}
+
+.ribbon-button--ghost:hover:not(:disabled) {
+  background-color: var(--ribbon-bg-hover);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-button--ghost:active:not(:disabled) {
+  background-color: var(--ribbon-bg-active);
+  border-color: var(--ribbon-border-color-dark);
+}
+
+/* ============================================================================
+   States
+   ============================================================================ */
+
+.ribbon-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.ribbon-button--active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ribbon-button--loading {
+  pointer-events: none;
+}
+
+/* ============================================================================
+   Loading Indicator
+   ============================================================================ */
+
+.ribbon-button__loader {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================================
+   Content Layout
+   ============================================================================ */
+
+.ribbon-button__content {
+  display: flex;
+  align-items: center;
+  gap: inherit;
+}
+
+.ribbon-button__content--reverse {
+  flex-direction: row-reverse;
+}
+
+/* ============================================================================
+   Icon
+   ============================================================================ */
+
+.ribbon-button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ribbon-button__icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+/* ============================================================================
+   Label
+   ============================================================================ */
+
+.ribbon-button__label {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================================
+   Full Width
+   ============================================================================ */
+
+.ribbon-button--full-width {
+  width: 100%;
+}
+
+/* ============================================================================
+   Compact
+   ============================================================================ */
+
+.ribbon-button--compact {
+  padding-left: var(--ribbon-space-2);
+  padding-right: var(--ribbon-space-2);
+  gap: var(--ribbon-space-1);
+}
+
+/* ============================================================================
+   Focus Styles
+   ============================================================================ */
+
+.ribbon-button:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-button--primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.ribbon-dark .ribbon-button--primary:hover:not(:disabled) {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.ribbon-dark .ribbon-button--secondary {
+  background-color: var(--ribbon-bg-secondary);
+  border-color: var(--ribbon-border-color);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-button {
+  border-width: 2px;
+  min-height: 2.5rem;
+  font-weight: 600;
+}
+
+.ribbon-accessible .ribbon-button:focus-visible {
+  outline: 3px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}

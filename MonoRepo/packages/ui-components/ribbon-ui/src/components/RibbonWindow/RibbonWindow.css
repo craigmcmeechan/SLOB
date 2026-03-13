@@ -1,0 +1,306 @@
+/* ============================================================================
+   RibbonWindow Component Styles
+   ============================================================================ */
+
+.ribbon-window {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ribbon-bg-primary);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-md);
+  box-shadow: var(--ribbon-shadow-lg);
+  overflow: hidden;
+  user-select: none;
+  transition: box-shadow var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-window--focused {
+  box-shadow: var(--ribbon-shadow-xl);
+  border-color: var(--ribbon-primary);
+}
+
+.ribbon-window--minimized {
+  display: none;
+}
+
+.ribbon-window--maximized {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0;
+  max-width: none;
+  max-height: none;
+}
+
+.ribbon-window--fullscreen {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 9999 !important;
+}
+
+/* ============================================================================
+   Title Bar
+   ============================================================================ */
+
+.ribbon-window__titlebar {
+  display: flex;
+  align-items: center;
+  height: var(--ribbon-size-tab-height);
+  padding: 0 var(--ribbon-space-2);
+  background: linear-gradient(
+    to bottom,
+    var(--ribbon-bg-secondary),
+    var(--ribbon-bg-secondary)
+  );
+  border-bottom: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  cursor: move;
+  user-select: none;
+}
+
+.ribbon-window--focused .ribbon-window__titlebar {
+  background: linear-gradient(
+    to bottom,
+    var(--ribbon-primary),
+    var(--ribbon-primary-hover)
+  );
+  color: var(--ribbon-text-inverse);
+}
+
+/* ============================================================================
+   Icon
+   ============================================================================ */
+
+.ribbon-window__icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: var(--ribbon-space-2);
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   Title
+   ============================================================================ */
+
+.ribbon-window__title {
+  flex: 1;
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: var(--ribbon-font-weight-semibold);
+  color: var(--ribbon-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.ribbon-window--focused .ribbon-window__title {
+  color: var(--ribbon-text-inverse);
+}
+
+/* ============================================================================
+   Window Controls (Minimize, Maximize, Close)
+   ============================================================================ */
+
+.ribbon-window__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-space-1);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.ribbon-window__button {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ribbon-text-primary);
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  border-radius: var(--ribbon-border-radius-sm);
+  font-size: 0;
+}
+
+.ribbon-window--focused .ribbon-window__button {
+  color: var(--ribbon-text-inverse);
+}
+
+.ribbon-window__button:hover:not(:disabled) {
+  background-color: var(--ribbon-bg-hover);
+}
+
+.ribbon-window__button:active:not(:disabled) {
+  background-color: var(--ribbon-bg-active);
+}
+
+.ribbon-window__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button Icons using pseudo-elements */
+.ribbon-window__button--minimize::before {
+  content: '−';
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.ribbon-window__button--maximize::before {
+  content: '□';
+  font-size: 1rem;
+}
+
+.ribbon-window__button--close::before {
+  content: '×';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* ============================================================================
+   Content Area
+   ============================================================================ */
+
+.ribbon-window__content {
+  flex: 1;
+  overflow: auto;
+  padding: var(--ribbon-space-4);
+  color: var(--ribbon-text-primary);
+  background-color: var(--ribbon-bg-primary);
+}
+
+/* ============================================================================
+   Resize Handle
+   ============================================================================ */
+
+.ribbon-window__resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background: linear-gradient(135deg, transparent 50%, var(--ribbon-border-color) 50%);
+  cursor: nwse-resize;
+  user-select: none;
+  opacity: 0.5;
+  transition: opacity var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-window:hover .ribbon-window__resize-handle {
+  opacity: 1;
+}
+
+/* ============================================================================
+   Backdrop (for Modal Windows)
+   ============================================================================ */
+
+.ribbon-window__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.ribbon-window__backdrop--dark {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ribbon-window__backdrop--light {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.ribbon-window__backdrop--blur {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+/* ============================================================================
+   Responsive Design
+   ============================================================================ */
+
+@media (max-width: 600px) {
+  .ribbon-window {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0;
+  }
+
+  .ribbon-window__titlebar {
+    height: 2.5rem;
+  }
+
+  .ribbon-window__button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* ============================================================================
+   Dark Theme Adjustments
+   ============================================================================ */
+
+.ribbon-dark .ribbon-window {
+  background-color: var(--ribbon-bg-primary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-window__titlebar {
+  background: linear-gradient(
+    to bottom,
+    var(--ribbon-bg-secondary),
+    var(--ribbon-bg-tertiary)
+  );
+  border-bottom-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-window__title {
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-dark .ribbon-window__button {
+  color: var(--ribbon-text-primary);
+}
+
+/* ============================================================================
+   Accessible Theme Adjustments
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-window {
+  border-width: 2px;
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-accessible .ribbon-window__titlebar {
+  height: 2.5rem;
+  padding: 0 var(--ribbon-space-3);
+}
+
+.ribbon-accessible .ribbon-window__button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid transparent;
+}
+
+.ribbon-accessible .ribbon-window__button:focus-visible {
+  outline: 3px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
+
+.ribbon-accessible .ribbon-window__button:focus-visible::-moz-focus-inner {
+  border: 0;
+}

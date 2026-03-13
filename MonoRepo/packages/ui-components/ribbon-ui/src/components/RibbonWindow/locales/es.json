@@ -1,0 +1,15 @@
+{
+  "title": "Ventana",
+  "minimize": "Minimizar",
+  "maximize": "Maximizar",
+  "restore": "Restaurar",
+  "close": "Cerrar",
+  "move": "Mover ventana",
+  "resize": "Cambiar tamaño de ventana",
+  "modal": "Diálogo Modal",
+  "dialog": "Diálogo",
+  "popup": "Ventana Emergente",
+  "child": "Ventana Secundaria",
+  "confirmClose": "¿Está seguro de que desea cerrar esta ventana?",
+  "unsavedChanges": "Tiene cambios sin guardar. ¿Cerrar de todas formas?"
+}

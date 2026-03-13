@@ -1,0 +1,15 @@
+{
+  "title": "Window",
+  "minimize": "Minimize",
+  "maximize": "Maximize",
+  "restore": "Restore",
+  "close": "Close",
+  "move": "Move window",
+  "resize": "Resize window",
+  "modal": "Modal Dialog",
+  "dialog": "Dialog",
+  "popup": "Popup Window",
+  "child": "Child Window",
+  "confirmClose": "Are you sure you want to close this window?",
+  "unsavedChanges": "You have unsaved changes. Close anyway?"
+}

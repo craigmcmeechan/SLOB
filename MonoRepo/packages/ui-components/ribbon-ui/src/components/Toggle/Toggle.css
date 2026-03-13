@@ -1,0 +1,185 @@
+/* ============================================================================
+   Toggle Switch Component Styles
+   ============================================================================ */
+
+.ribbon-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-space-2);
+  user-select: none;
+}
+
+.ribbon-toggle-container--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Toggle Switch
+   ============================================================================ */
+
+.ribbon-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ribbon-toggle__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.ribbon-toggle--disabled .ribbon-toggle__input {
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Track (background)
+   ============================================================================ */
+
+.ribbon-toggle__track {
+  position: relative;
+  display: inline-block;
+  background-color: var(--ribbon-bg-tertiary);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: 999px;
+  transition: background-color var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-toggle--small .ribbon-toggle__track {
+  width: 2.5rem;
+  height: 1.25rem;
+}
+
+.ribbon-toggle--medium .ribbon-toggle__track {
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.ribbon-toggle--large .ribbon-toggle__track {
+  width: 3.5rem;
+  height: 1.75rem;
+}
+
+/* ============================================================================
+   Thumb (slider)
+   ============================================================================ */
+
+.ribbon-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: var(--ribbon-bg-primary);
+  border-radius: 999px;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  box-shadow: var(--ribbon-shadow-sm);
+}
+
+.ribbon-toggle--small .ribbon-toggle__thumb {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.ribbon-toggle--medium .ribbon-toggle__thumb {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.ribbon-toggle--large .ribbon-toggle__thumb {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+/* ============================================================================
+   Checked State
+   ============================================================================ */
+
+.ribbon-toggle__input:checked + .ribbon-toggle__label .ribbon-toggle__track {
+  background-color: var(--ribbon-success);
+  border-color: var(--ribbon-success);
+}
+
+.ribbon-toggle__input:checked + .ribbon-toggle__label .ribbon-toggle__thumb {
+  background-color: var(--ribbon-text-inverse);
+}
+
+.ribbon-toggle--small .ribbon-toggle__input:checked + .ribbon-toggle__label .ribbon-toggle__thumb {
+  left: calc(2.5rem - 1.05rem - 2px);
+}
+
+.ribbon-toggle--medium .ribbon-toggle__input:checked + .ribbon-toggle__label .ribbon-toggle__thumb {
+  left: calc(3rem - 1.3rem - 2px);
+}
+
+.ribbon-toggle--large .ribbon-toggle__input:checked + .ribbon-toggle__label .ribbon-toggle__thumb {
+  left: calc(3.5rem - 1.55rem - 2px);
+}
+
+/* ============================================================================
+   Focus State
+   ============================================================================ */
+
+.ribbon-toggle__input:focus-visible + .ribbon-toggle__label {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================================
+   Disabled State
+   ============================================================================ */
+
+.ribbon-toggle__input:disabled + .ribbon-toggle__label {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ============================================================================
+   Text Label
+   ============================================================================ */
+
+.ribbon-toggle__text-label {
+  cursor: pointer;
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-primary);
+  user-select: none;
+}
+
+.ribbon-toggle-container--disabled .ribbon-toggle__text-label {
+  cursor: not-allowed;
+  color: var(--ribbon-text-disabled);
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-toggle__track {
+  background-color: var(--ribbon-bg-tertiary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-toggle__thumb {
+  background-color: var(--ribbon-bg-secondary);
+}
+
+.ribbon-dark .ribbon-toggle__text-label {
+  color: var(--ribbon-text-primary);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-toggle__track {
+  border-width: 2px;
+}
+
+.ribbon-accessible .ribbon-toggle__input:focus-visible + .ribbon-toggle__label {
+  outline: 3px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
