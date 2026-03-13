@@ -1,0 +1,125 @@
+/* ============================================================================
+   Menu Component Styles
+   ============================================================================ */
+
+.ribbon-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--ribbon-bg-primary);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 160px;
+  overflow: hidden;
+}
+
+/* ============================================================================
+   Menu Item
+   ============================================================================ */
+
+.ribbon-menu__item {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-space-2);
+  padding: var(--ribbon-space-3) var(--ribbon-space-3);
+  border: none;
+  background: transparent;
+  color: var(--ribbon-text-primary);
+  font-size: var(--ribbon-font-size-sm);
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  white-space: nowrap;
+}
+
+.ribbon-menu__item:hover:not(:disabled) {
+  background-color: var(--ribbon-bg-secondary);
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-menu__item:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: -2px;
+}
+
+.ribbon-menu__item--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Menu Item Icon
+   ============================================================================ */
+
+.ribbon-menu__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   Menu Item Label
+   ============================================================================ */
+
+.ribbon-menu__label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================================
+   Menu Item Arrow
+   ============================================================================ */
+
+.ribbon-menu__arrow {
+  font-size: 16px;
+  color: var(--ribbon-text-secondary);
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   Menu Divider
+   ============================================================================ */
+
+.ribbon-menu__divider {
+  height: 1px;
+  background-color: var(--ribbon-border-color);
+  margin: var(--ribbon-space-1) 0;
+  opacity: 0.5;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-menu {
+  background-color: var(--ribbon-bg-primary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-menu__item {
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-dark .ribbon-menu__item:hover:not(:disabled) {
+  background-color: var(--ribbon-bg-secondary);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-menu {
+  border-width: 2px;
+}
+
+.ribbon-accessible .ribbon-menu__item:focus-visible {
+  outline-width: 3px;
+}

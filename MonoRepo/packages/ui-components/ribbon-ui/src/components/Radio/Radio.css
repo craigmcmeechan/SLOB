@@ -1,0 +1,136 @@
+/* ============================================================================
+   Radio Component Styles
+   ============================================================================ */
+
+.ribbon-radio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-2);
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ribbon-radio--horizontal {
+  flex-direction: row;
+  gap: var(--ribbon-space-4);
+}
+
+.ribbon-radio--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ============================================================================
+   Radio Item
+   ============================================================================ */
+
+.ribbon-radio__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ribbon-space-2);
+  cursor: pointer;
+}
+
+.ribbon-radio__input {
+  display: none;
+}
+
+/* ============================================================================
+   Radio Box
+   ============================================================================ */
+
+.ribbon-radio__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ribbon-border-color);
+  border-radius: 50%;
+  background-color: var(--ribbon-bg-primary);
+  flex-shrink: 0;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  margin-top: 2px;
+}
+
+.ribbon-radio__item:hover .ribbon-radio__input:not(:disabled) ~ .ribbon-radio__box {
+  border-color: var(--ribbon-primary);
+  background-color: var(--ribbon-primary-10);
+}
+
+.ribbon-radio__input:checked ~ .ribbon-radio__box {
+  border-color: var(--ribbon-primary);
+  background-color: var(--ribbon-primary);
+}
+
+.ribbon-radio__input:focus-visible ~ .ribbon-radio__box {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   Radio Dot
+   ============================================================================ */
+
+.ribbon-radio__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--ribbon-text-inverse);
+  opacity: 0;
+  transition: opacity var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-radio__input:checked ~ .ribbon-radio__box .ribbon-radio__dot {
+  opacity: 1;
+}
+
+/* ============================================================================
+   Radio Label
+   ============================================================================ */
+
+.ribbon-radio__label {
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+  line-height: 1.4;
+  padding-top: 2px;
+}
+
+/* ============================================================================
+   Radio Description
+   ============================================================================ */
+
+.ribbon-radio__description {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  line-height: 1.3;
+  margin-left: 22px;
+  margin-top: -4px;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-radio__box {
+  border-color: var(--ribbon-border-color);
+  background-color: var(--ribbon-bg-primary);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-radio__box {
+  border-width: 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.ribbon-accessible .ribbon-radio__input:focus-visible ~ .ribbon-radio__box {
+  outline-width: 3px;
+}

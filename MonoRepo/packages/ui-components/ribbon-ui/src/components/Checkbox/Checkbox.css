@@ -1,0 +1,139 @@
+/* ============================================================================
+   Checkbox Component Styles
+   ============================================================================ */
+
+.ribbon-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ribbon-space-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ribbon-checkbox__input {
+  display: none;
+}
+
+/* ============================================================================
+   Checkbox Box
+   ============================================================================ */
+
+.ribbon-checkbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-sm);
+  background-color: var(--ribbon-bg-primary);
+  color: var(--ribbon-text-inverse);
+  flex-shrink: 0;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  margin-top: 2px;
+}
+
+.ribbon-checkbox:hover .ribbon-checkbox__input:not(:disabled) ~ .ribbon-checkbox__box {
+  border-color: var(--ribbon-primary);
+  background-color: var(--ribbon-primary-10);
+}
+
+.ribbon-checkbox__input:checked ~ .ribbon-checkbox__box {
+  border-color: var(--ribbon-primary);
+  background-color: var(--ribbon-primary);
+}
+
+.ribbon-checkbox__input:indeterminate ~ .ribbon-checkbox__box {
+  border-color: var(--ribbon-primary);
+  background-color: var(--ribbon-primary);
+}
+
+.ribbon-checkbox__input:focus-visible ~ .ribbon-checkbox__box {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
+
+.ribbon-checkbox__input:disabled ~ .ribbon-checkbox__box {
+  border-color: var(--ribbon-border-color);
+  background-color: var(--ribbon-bg-tertiary);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Checkbox Icons
+   ============================================================================ */
+
+.ribbon-checkbox__check,
+.ribbon-checkbox__indeterminate {
+  width: 14px;
+  height: 14px;
+  display: none;
+}
+
+.ribbon-checkbox__input:checked ~ .ribbon-checkbox__box .ribbon-checkbox__check {
+  display: block;
+}
+
+.ribbon-checkbox__input:indeterminate ~ .ribbon-checkbox__box .ribbon-checkbox__indeterminate {
+  display: block;
+}
+
+/* ============================================================================
+   Checkbox Label
+   ============================================================================ */
+
+.ribbon-checkbox__label {
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+  line-height: 1.4;
+  padding-top: 2px;
+}
+
+.ribbon-checkbox__input:disabled ~ .ribbon-checkbox__label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Checkbox Description
+   ============================================================================ */
+
+.ribbon-checkbox__description {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  line-height: 1.3;
+  margin-left: 22px;
+  margin-top: -4px;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-checkbox__box {
+  border-color: var(--ribbon-border-color);
+  background-color: var(--ribbon-bg-primary);
+}
+
+.ribbon-dark .ribbon-checkbox:hover .ribbon-checkbox__input:not(:disabled) ~ .ribbon-checkbox__box {
+  border-color: var(--ribbon-primary);
+  background-color: var(--ribbon-primary-10);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-checkbox__box {
+  border-width: 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.ribbon-accessible .ribbon-checkbox__input:focus-visible ~ .ribbon-checkbox__box {
+  outline-width: 3px;
+}

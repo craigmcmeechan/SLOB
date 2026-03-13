@@ -1,0 +1,130 @@
+/* ============================================================================
+   Slider Component Styles
+   ============================================================================ */
+
+.ribbon-slider {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-3);
+  width: 100%;
+  max-width: 400px;
+}
+
+.ribbon-slider--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ============================================================================
+   Slider Header
+   ============================================================================ */
+
+.ribbon-slider__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ribbon-slider__label {
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: 600;
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-slider__value {
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-secondary);
+  font-weight: 500;
+}
+
+/* ============================================================================
+   Slider Wrapper
+   ============================================================================ */
+
+.ribbon-slider__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+/* ============================================================================
+   Slider Input (hidden)
+   ============================================================================ */
+
+.ribbon-slider__input {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.ribbon-slider__input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ribbon-primary);
+  border: 2px solid var(--ribbon-bg-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-slider__input::-webkit-slider-thumb:hover {
+  background-color: var(--ribbon-primary-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon-slider__input::-webkit-slider-thumb:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
+
+.ribbon-slider__input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ribbon-primary);
+  border: 2px solid var(--ribbon-bg-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-slider__input::-moz-range-thumb:hover {
+  background-color: var(--ribbon-primary-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================================
+   Slider Track
+   ============================================================================ */
+
+.ribbon-slider__track {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--ribbon-bg-secondary);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.ribbon-slider__track::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--percentage, 0%);
+  background-color: var(--ribbon-primary);
+  border-radius: 2px;
+  transition: width var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}

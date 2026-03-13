@@ -4,7 +4,15 @@
       "mcp__Desktop_Commander__list_directory",
       "mcp__Desktop_Commander__start_process",
       "mcp__Desktop_Commander__read_process_output",
-      "mcp__Desktop_Commander__create_directory"
+      "mcp__Desktop_Commander__create_directory",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Label/locales/es.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Label/locales/fr.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Label/locales/de.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/en.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/es.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/fr.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/de.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/NumberInput/locales/en.json:*)"
     ]
   }
 }

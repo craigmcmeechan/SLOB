@@ -1,0 +1,57 @@
+/* ============================================================================
+   ButtonGroup Component Styles
+   ============================================================================ */
+
+.ribbon-button-group {
+  display: flex;
+  gap: 0;
+}
+
+.ribbon-button-group--horizontal {
+  flex-direction: row;
+}
+
+.ribbon-button-group--vertical {
+  flex-direction: column;
+}
+
+/* ============================================================================
+   ButtonGroup Item
+   ============================================================================ */
+
+.ribbon-button-group__item {
+  border-radius: 0;
+}
+
+.ribbon-button-group__item--first {
+  border-top-left-radius: var(--ribbon-border-radius-sm);
+  border-bottom-left-radius: var(--ribbon-border-radius-sm);
+}
+
+.ribbon-button-group--vertical .ribbon-button-group__item--first {
+  border-top-left-radius: var(--ribbon-border-radius-sm);
+  border-top-right-radius: var(--ribbon-border-radius-sm);
+}
+
+.ribbon-button-group__item--last {
+  border-top-right-radius: var(--ribbon-border-radius-sm);
+  border-bottom-right-radius: var(--ribbon-border-radius-sm);
+}
+
+.ribbon-button-group--vertical .ribbon-button-group__item--last {
+  border-bottom-left-radius: var(--ribbon-border-radius-sm);
+  border-bottom-right-radius: var(--ribbon-border-radius-sm);
+}
+
+.ribbon-button-group__item:not(:last-child) {
+  border-right: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+}
+
+.ribbon-button-group--vertical .ribbon-button-group__item:not(:last-child) {
+  border-right: none;
+  border-bottom: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+}
+
+.ribbon-button-group__item--active {
+  z-index: 10;
+}

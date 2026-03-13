@@ -1,0 +1,133 @@
+/* ============================================================================
+   NumberInput Component Styles
+   ============================================================================ */
+
+.ribbon-numberinput {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-2);
+  width: 100%;
+  max-width: 150px;
+}
+
+/* ============================================================================
+   NumberInput Label
+   ============================================================================ */
+
+.ribbon-numberinput__label {
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: 600;
+  color: var(--ribbon-text-primary);
+}
+
+/* ============================================================================
+   NumberInput Wrapper
+   ============================================================================ */
+
+.ribbon-numberinput__wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--ribbon-bg-primary);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-sm);
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  min-height: 32px;
+}
+
+.ribbon-numberinput:hover .ribbon-numberinput__wrapper:not(.ribbon-numberinput--readonly .ribbon-numberinput__wrapper) {
+  border-color: var(--ribbon-border-color-hover);
+}
+
+.ribbon-numberinput:focus-within .ribbon-numberinput__wrapper {
+  border-color: var(--ribbon-primary);
+  box-shadow: 0 0 0 2px var(--ribbon-focus-glow);
+}
+
+/* ============================================================================
+   NumberInput Field
+   ============================================================================ */
+
+.ribbon-numberinput__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ribbon-text-primary);
+  font-size: var(--ribbon-font-size-sm);
+  padding: var(--ribbon-space-2) var(--ribbon-space-2);
+  text-align: center;
+  font-family: inherit;
+}
+
+.ribbon-numberinput__input::-webkit-outer-spin-button,
+.ribbon-numberinput__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ribbon-numberinput__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ribbon-numberinput--disabled .ribbon-numberinput__input {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   NumberInput Spinner Buttons
+   ============================================================================ */
+
+.ribbon-numberinput__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: var(--ribbon-text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  border-left: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+}
+
+.ribbon-numberinput__button--down {
+  border-left: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-right: none;
+}
+
+.ribbon-numberinput__button--up {
+  border-right: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-left: none;
+}
+
+.ribbon-numberinput__button:hover:not(:disabled) {
+  background-color: var(--ribbon-bg-secondary);
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-numberinput__button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.ribbon-numberinput__button:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: -2px;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-numberinput__wrapper {
+  background-color: var(--ribbon-bg-primary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-numberinput__input {
+  color: var(--ribbon-text-primary);
+}

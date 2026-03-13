@@ -1,0 +1,6 @@
+{
+  "checkbox.unchecked": "Sin marcar",
+  "checkbox.checked": "Marcado",
+  "checkbox.indeterminate": "Parcialmente marcado",
+  "checkbox.label": "Casilla de verificación"
+}

@@ -1,0 +1,130 @@
+/* ============================================================================
+   ProgressBar Component Styles
+   ============================================================================ */
+
+.ribbon-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-2);
+  width: 100%;
+}
+
+/* ============================================================================
+   Progress Header
+   ============================================================================ */
+
+.ribbon-progress__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ribbon-progress__label {
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: 600;
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-progress__value {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  font-weight: 500;
+}
+
+/* ============================================================================
+   Progress Container
+   ============================================================================ */
+
+.ribbon-progress__container {
+  width: 100%;
+  background-color: var(--ribbon-bg-secondary);
+  border-radius: var(--ribbon-border-radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================================================================
+   Progress Bar
+   ============================================================================ */
+
+.ribbon-progress__bar {
+  height: 100%;
+  background-color: var(--ribbon-primary);
+  transition: width var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  position: relative;
+}
+
+.ribbon-progress__bar--success {
+  background-color: var(--ribbon-success);
+}
+
+.ribbon-progress__bar--warning {
+  background-color: var(--ribbon-warning);
+}
+
+.ribbon-progress__bar--danger {
+  background-color: var(--ribbon-danger);
+}
+
+.ribbon-progress__bar--info {
+  background-color: var(--ribbon-info);
+}
+
+/* ============================================================================
+   Progress Sizes
+   ============================================================================ */
+
+.ribbon-progress--small .ribbon-progress__container {
+  height: 4px;
+}
+
+.ribbon-progress--medium .ribbon-progress__container {
+  height: 8px;
+}
+
+.ribbon-progress--large .ribbon-progress__container {
+  height: 16px;
+}
+
+/* ============================================================================
+   Progress Striped
+   ============================================================================ */
+
+.ribbon-progress__bar--striped {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 40px 40px;
+}
+
+/* ============================================================================
+   Progress Animated
+   ============================================================================ */
+
+.ribbon-progress__bar--animated {
+  animation: ribbon-progress-stripes 1s linear infinite;
+}
+
+@keyframes ribbon-progress-stripes {
+  0% {
+    background-position: 40px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-progress__container {
+  background-color: var(--ribbon-bg-secondary);
+}

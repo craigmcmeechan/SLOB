@@ -1,0 +1,81 @@
+/* ============================================================================
+   SplitButton Component Styles
+   ============================================================================ */
+
+.ribbon-split-button {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.ribbon-split-button--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ribbon-split-button--menu-open .ribbon-split-button__menu-button {
+  background-color: var(--ribbon-primary-dark);
+}
+
+/* ============================================================================
+   SplitButton Primary Button
+   ============================================================================ */
+
+.ribbon-split-button__primary {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+/* ============================================================================
+   SplitButton Menu Button
+   ============================================================================ */
+
+.ribbon-split-button__menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--ribbon-primary);
+  border-left: none;
+  border-top-right-radius: var(--ribbon-border-radius-sm);
+  border-bottom-right-radius: var(--ribbon-border-radius-sm);
+  background-color: var(--ribbon-primary);
+  color: var(--ribbon-text-inverse);
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-split-button__menu-button:hover:not(:disabled) {
+  background-color: var(--ribbon-primary-dark);
+}
+
+.ribbon-split-button__menu-button:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: -2px;
+}
+
+.ribbon-split-button__menu-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon-split-button__menu-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ============================================================================
+   SplitButton Menu
+   ============================================================================ */
+
+.ribbon-split-button__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  z-index: 1000;
+}

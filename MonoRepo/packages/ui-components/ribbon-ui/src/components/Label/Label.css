@@ -1,0 +1,120 @@
+/* ============================================================================
+   Label Component Styles
+   ============================================================================ */
+
+.ribbon-label {
+  display: inline-block;
+}
+
+/* ============================================================================
+   Label Variants
+   ============================================================================ */
+
+.ribbon-label--default {
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-label--secondary {
+  color: var(--ribbon-text-secondary);
+}
+
+.ribbon-label--muted {
+  color: var(--ribbon-text-disabled);
+}
+
+.ribbon-label--error {
+  color: var(--ribbon-danger);
+}
+
+.ribbon-label--success {
+  color: var(--ribbon-success);
+}
+
+.ribbon-label--warning {
+  color: var(--ribbon-warning);
+}
+
+.ribbon-label--info {
+  color: var(--ribbon-info);
+}
+
+/* ============================================================================
+   Label Sizes
+   ============================================================================ */
+
+.ribbon-label--small {
+  font-size: var(--ribbon-font-size-xs);
+  line-height: 1.3;
+}
+
+.ribbon-label--medium {
+  font-size: var(--ribbon-font-size-sm);
+  line-height: 1.4;
+}
+
+.ribbon-label--large {
+  font-size: var(--ribbon-font-size-base);
+  line-height: 1.5;
+}
+
+/* ============================================================================
+   Label Font Weight
+   ============================================================================ */
+
+.ribbon-label--normal {
+  font-weight: 400;
+}
+
+.ribbon-label--medium {
+  font-weight: 500;
+}
+
+.ribbon-label--semibold {
+  font-weight: 600;
+}
+
+.ribbon-label--bold {
+  font-weight: 700;
+}
+
+/* ============================================================================
+   Label Alignment
+   ============================================================================ */
+
+.ribbon-label--left {
+  text-align: left;
+}
+
+.ribbon-label--center {
+  text-align: center;
+}
+
+.ribbon-label--right {
+  text-align: right;
+}
+
+/* ============================================================================
+   Label Text Handling
+   ============================================================================ */
+
+.ribbon-label--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ribbon-label--nowrap {
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-label--default {
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-dark .ribbon-label--secondary {
+  color: var(--ribbon-text-secondary);
+}

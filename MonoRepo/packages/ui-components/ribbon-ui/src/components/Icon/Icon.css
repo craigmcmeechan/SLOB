@@ -1,0 +1,38 @@
+/* ============================================================================
+   Icon Component Styles
+   ============================================================================ */
+
+.ribbon-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   Icon Sizes
+   ============================================================================ */
+
+.ribbon-icon--small {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.ribbon-icon--medium {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.ribbon-icon--large {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+
+.ribbon-icon--xlarge {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}

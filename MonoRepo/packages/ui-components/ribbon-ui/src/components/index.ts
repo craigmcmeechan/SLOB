@@ -19,19 +19,62 @@ export type {
 export { Button } from './Button/Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './Button/Button';
 
-// Additional components will be added here
-// - Toggle/Switch
-// - Checkbox
-// - Radio
-// - Dropdown/ComboBox
-// - Input/TextInput
-// - Menu
-// - Separator
-// - Label
-// - Icon
-// - Badge
-// - Slider
-// - DatePicker
-// - ColorPicker
-// - Gallery
-// - ProgressBar
+// Toggle
+export { Toggle } from './Toggle/Toggle';
+export type { ToggleProps } from './Toggle/Toggle';
+
+// Checkbox
+export { Checkbox } from './Checkbox/Checkbox';
+export type { CheckboxProps } from './Checkbox/Checkbox';
+
+// Radio
+export { Radio } from './Radio/Radio';
+export type { RadioProps, RadioOption } from './Radio/Radio';
+
+// TextInput
+export { TextInput } from './TextInput/TextInput';
+export type { TextInputProps } from './TextInput/TextInput';
+
+// Dropdown
+export { Dropdown } from './Dropdown/Dropdown';
+export type { DropdownProps, DropdownOption } from './Dropdown/Dropdown';
+
+// NumberInput
+export { NumberInput } from './NumberInput/NumberInput';
+export type { NumberInputProps } from './NumberInput/NumberInput';
+
+// Label
+export { Label } from './Label/Label';
+export type { LabelProps } from './Label/Label';
+
+// Separator
+export { Separator } from './Separator/Separator';
+export type { SeparatorProps } from './Separator/Separator';
+
+// Icon
+export { Icon } from './Icon/Icon';
+export type { IconProps } from './Icon/Icon';
+
+// Badge
+export { Badge } from './Badge/Badge';
+export type { BadgeProps } from './Badge/Badge';
+
+// Menu
+export { Menu } from './Menu/Menu';
+export type { MenuProps, MenuItem } from './Menu/Menu';
+
+// ButtonGroup
+export { ButtonGroup } from './ButtonGroup/ButtonGroup';
+export type { ButtonGroupProps, ButtonGroupItem } from './ButtonGroup/ButtonGroup';
+
+// SplitButton
+export { SplitButton } from './SplitButton/SplitButton';
+export type { SplitButtonProps } from './SplitButton/SplitButton';
+
+// Slider
+export { Slider } from './Slider/Slider';
+export type { SliderProps } from './Slider/Slider';
+
+// ProgressBar
+export { ProgressBar } from './ProgressBar/ProgressBar';
+export type { ProgressBarProps } from './ProgressBar/ProgressBar';

@@ -1,0 +1,139 @@
+/* ============================================================================
+   Badge Component Styles
+   ============================================================================ */
+
+.ribbon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   Badge Variants
+   ============================================================================ */
+
+.ribbon-badge--default {
+  background-color: var(--ribbon-bg-secondary);
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-badge--primary {
+  background-color: var(--ribbon-primary);
+  color: var(--ribbon-text-inverse);
+}
+
+.ribbon-badge--success {
+  background-color: var(--ribbon-success);
+  color: var(--ribbon-text-inverse);
+}
+
+.ribbon-badge--warning {
+  background-color: var(--ribbon-warning);
+  color: var(--ribbon-text-inverse);
+}
+
+.ribbon-badge--danger {
+  background-color: var(--ribbon-danger);
+  color: var(--ribbon-text-inverse);
+}
+
+.ribbon-badge--info {
+  background-color: var(--ribbon-info);
+  color: var(--ribbon-text-inverse);
+}
+
+/* ============================================================================
+   Badge Outline Variants
+   ============================================================================ */
+
+.ribbon-badge--outline.ribbon-badge--default {
+  background-color: transparent;
+  color: var(--ribbon-text-primary);
+  border: 1px solid var(--ribbon-border-color);
+}
+
+.ribbon-badge--outline.ribbon-badge--primary {
+  background-color: transparent;
+  color: var(--ribbon-primary);
+  border: 1px solid var(--ribbon-primary);
+}
+
+.ribbon-badge--outline.ribbon-badge--success {
+  background-color: transparent;
+  color: var(--ribbon-success);
+  border: 1px solid var(--ribbon-success);
+}
+
+.ribbon-badge--outline.ribbon-badge--warning {
+  background-color: transparent;
+  color: var(--ribbon-warning);
+  border: 1px solid var(--ribbon-warning);
+}
+
+.ribbon-badge--outline.ribbon-badge--danger {
+  background-color: transparent;
+  color: var(--ribbon-danger);
+  border: 1px solid var(--ribbon-danger);
+}
+
+.ribbon-badge--outline.ribbon-badge--info {
+  background-color: transparent;
+  color: var(--ribbon-info);
+  border: 1px solid var(--ribbon-info);
+}
+
+/* ============================================================================
+   Badge Sizes
+   ============================================================================ */
+
+.ribbon-badge--small {
+  padding: 2px 8px;
+  font-size: var(--ribbon-font-size-xs);
+  height: 20px;
+}
+
+.ribbon-badge--medium {
+  padding: 4px 12px;
+  font-size: var(--ribbon-font-size-xs);
+  height: 24px;
+}
+
+.ribbon-badge--large {
+  padding: 6px 16px;
+  font-size: var(--ribbon-font-size-sm);
+  height: 32px;
+}
+
+/* ============================================================================
+   Badge Dot
+   ============================================================================ */
+
+.ribbon-badge--dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.ribbon-badge--dot.ribbon-badge--small {
+  width: 6px;
+  height: 6px;
+}
+
+.ribbon-badge--dot.ribbon-badge--large {
+  width: 10px;
+  height: 10px;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-badge--default {
+  background-color: var(--ribbon-bg-secondary);
+  color: var(--ribbon-text-primary);
+}

@@ -1,0 +1,148 @@
+/* ============================================================================
+   Dropdown Component Styles
+   ============================================================================ */
+
+.ribbon-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-2);
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ============================================================================
+   Dropdown Label
+   ============================================================================ */
+
+.ribbon-dropdown__label {
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: 600;
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-dropdown__required {
+  color: var(--ribbon-danger);
+  margin-left: 4px;
+}
+
+/* ============================================================================
+   Dropdown Wrapper
+   ============================================================================ */
+
+.ribbon-dropdown__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--ribbon-bg-primary);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-sm);
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  min-height: 32px;
+}
+
+.ribbon-dropdown:hover .ribbon-dropdown__wrapper:not(.ribbon-dropdown--disabled .ribbon-dropdown__wrapper) {
+  border-color: var(--ribbon-border-color-hover);
+}
+
+.ribbon-dropdown:focus-within .ribbon-dropdown__wrapper {
+  border-color: var(--ribbon-primary);
+  box-shadow: 0 0 0 2px var(--ribbon-focus-glow);
+}
+
+.ribbon-dropdown--error .ribbon-dropdown__wrapper {
+  border-color: var(--ribbon-danger);
+}
+
+/* ============================================================================
+   Dropdown Select Element (hidden)
+   ============================================================================ */
+
+.ribbon-dropdown__select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.ribbon-dropdown--disabled .ribbon-dropdown__select {
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Dropdown Display Text
+   ============================================================================ */
+
+.ribbon-dropdown__display {
+  flex: 1;
+  padding: var(--ribbon-space-2) var(--ribbon-space-3);
+  color: var(--ribbon-text-primary);
+  font-size: var(--ribbon-font-size-sm);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ribbon-dropdown__select:disabled ~ .ribbon-dropdown__display {
+  opacity: 0.5;
+}
+
+/* ============================================================================
+   Dropdown Chevron
+   ============================================================================ */
+
+.ribbon-dropdown__chevron {
+  width: 20px;
+  height: 20px;
+  color: var(--ribbon-text-secondary);
+  margin-right: var(--ribbon-space-2);
+  pointer-events: none;
+  flex-shrink: 0;
+  transition: transform var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+.ribbon-dropdown__select:focus ~ .ribbon-dropdown__chevron {
+  color: var(--ribbon-primary);
+}
+
+/* ============================================================================
+   Dropdown Error
+   ============================================================================ */
+
+.ribbon-dropdown__error {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-danger);
+  line-height: 1.3;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-dropdown__wrapper {
+  background-color: var(--ribbon-bg-primary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-dropdown__display {
+  color: var(--ribbon-text-primary);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-dropdown__wrapper {
+  border-width: 2px;
+}
+
+.ribbon-accessible:focus-within .ribbon-dropdown__wrapper {
+  outline: 3px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
