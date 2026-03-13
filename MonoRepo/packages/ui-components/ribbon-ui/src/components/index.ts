@@ -78,3 +78,15 @@ export type { SliderProps } from './Slider/Slider';
 // ProgressBar
 export { ProgressBar } from './ProgressBar/ProgressBar';
 export type { ProgressBarProps } from './ProgressBar/ProgressBar';
+
+// Toolbar
+export { Toolbar } from './Toolbar/Toolbar';
+export type { ToolbarProps, ToolbarGroup, ToolbarControl } from './Toolbar/Toolbar';
+
+// Sidebar
+export { Sidebar } from './Sidebar/Sidebar';
+export type { SidebarProps, SidebarTab } from './Sidebar/Sidebar';
+
+// ButtonBar
+export { ButtonBar } from './ButtonBar/ButtonBar';
+export type { ButtonBarProps, ButtonBarAction, ButtonBarPreset } from './ButtonBar/ButtonBar';

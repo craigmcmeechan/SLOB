@@ -12,7 +12,10 @@
       "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/es.json:*)",
       "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/fr.json:*)",
       "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Dropdown/locales/de.json:*)",
-      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/NumberInput/locales/en.json:*)"
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/NumberInput/locales/en.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Toolbar/locales/en.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/Sidebar/locales/en.json:*)",
+      "Bash(/d/App/MonoRepo/packages/ui-components/ribbon-ui/src/components/ButtonBar/locales/en.json:*)"
     ]
   }
 }

@@ -113,8 +113,9 @@ import './styles/themes/accessible.css';
 // VERSION INFO
 // ============================================================================
 
-export const VERSION = '0.2.1';
+export const VERSION = '0.3.0';
 export const LIBRARY_NAME = '@ribbon-ui/core';
-export const PHASE = 'Phase 2: Complete Control Suite';
+export const PHASE = 'Phase 3: Container Components Complete';
 export const PHASE_1_COMPLETE = true;
 export const PHASE_2_COMPLETE = true;
+export const PHASE_3_COMPLETE = true;

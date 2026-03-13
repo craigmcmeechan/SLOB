@@ -1,0 +1,166 @@
+/* ============================================================================
+   Toolbar Component Styles
+   ============================================================================ */
+
+.ribbon-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-space-1);
+  background-color: var(--ribbon-bg-secondary);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-sm);
+  padding: var(--ribbon-space-2);
+  user-select: none;
+}
+
+.ribbon-toolbar--horizontal {
+  flex-direction: row;
+  width: 100%;
+  min-height: 44px;
+}
+
+.ribbon-toolbar--vertical {
+  flex-direction: column;
+  width: auto;
+  min-width: 44px;
+}
+
+/* ============================================================================
+   Toolbar Sizing
+   ============================================================================ */
+
+.ribbon-toolbar--small {
+  padding: var(--ribbon-space-1);
+  gap: 2px;
+  min-height: 32px;
+}
+
+.ribbon-toolbar--medium {
+  padding: var(--ribbon-space-2);
+  gap: var(--ribbon-space-1);
+  min-height: 44px;
+}
+
+.ribbon-toolbar--large {
+  padding: var(--ribbon-space-3);
+  gap: var(--ribbon-space-2);
+  min-height: 56px;
+}
+
+/* ============================================================================
+   Toolbar Wrapping
+   ============================================================================ */
+
+.ribbon-toolbar--wrap {
+  flex-wrap: wrap;
+}
+
+/* ============================================================================
+   Toolbar Compact Mode
+   ============================================================================ */
+
+.ribbon-toolbar--compact {
+  padding: var(--ribbon-space-1);
+  gap: 2px;
+}
+
+.ribbon-toolbar--compact .ribbon-toolbar__group {
+  gap: 2px;
+}
+
+/* ============================================================================
+   Toolbar Groups
+   ============================================================================ */
+
+.ribbon-toolbar__group {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-space-1);
+  flex-shrink: 0;
+}
+
+.ribbon-toolbar__group-label {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 var(--ribbon-space-1);
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   Toolbar Controls Container
+   ============================================================================ */
+
+.ribbon-toolbar__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-space-1);
+  flex-wrap: nowrap;
+}
+
+.ribbon-toolbar--vertical .ribbon-toolbar__controls {
+  flex-direction: column;
+  width: 100%;
+}
+
+.ribbon-toolbar--compact .ribbon-toolbar__controls {
+  gap: 2px;
+}
+
+/* ============================================================================
+   Toolbar Separators
+   ============================================================================ */
+
+.ribbon-toolbar__separator {
+  flex-shrink: 0;
+  background-color: var(--ribbon-border-color);
+  opacity: 0.3;
+}
+
+.ribbon-toolbar--horizontal .ribbon-toolbar__separator {
+  width: 1px;
+  height: 24px;
+  margin: 0 var(--ribbon-space-1);
+}
+
+.ribbon-toolbar--vertical .ribbon-toolbar__separator {
+  width: 24px;
+  height: 1px;
+  margin: var(--ribbon-space-1) 0;
+}
+
+.ribbon-toolbar--small .ribbon-toolbar__separator {
+  height: 16px;
+  margin: 0 2px;
+}
+
+.ribbon-toolbar--large .ribbon-toolbar__separator {
+  height: 32px;
+  margin: 0 var(--ribbon-space-2);
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-toolbar {
+  background-color: var(--ribbon-bg-secondary);
+  border-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon-toolbar__group-label {
+  color: var(--ribbon-text-secondary);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-toolbar {
+  border-width: 2px;
+}
+
+.ribbon-accessible .ribbon-toolbar__separator {
+  opacity: 0.5;
+}

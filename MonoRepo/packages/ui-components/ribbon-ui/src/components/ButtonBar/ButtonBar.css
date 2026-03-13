@@ -1,0 +1,60 @@
+/* ============================================================================
+   ButtonBar Component Styles
+   ============================================================================ */
+
+.ribbon-button-bar {
+  display: flex;
+  gap: var(--ribbon-space-2);
+  padding: var(--ribbon-space-3);
+  border-top: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  background-color: var(--ribbon-bg-primary);
+}
+
+/* ============================================================================
+   ButtonBar Layout
+   ============================================================================ */
+
+.ribbon-button-bar--left {
+  justify-content: flex-start;
+}
+
+.ribbon-button-bar--center {
+  justify-content: center;
+}
+
+.ribbon-button-bar--right {
+  justify-content: flex-end;
+}
+
+/* ============================================================================
+   ButtonBar Gap Sizing
+   ============================================================================ */
+
+.ribbon-button-bar--gap-compact {
+  gap: var(--ribbon-space-1);
+}
+
+.ribbon-button-bar--gap-normal {
+  gap: var(--ribbon-space-2);
+}
+
+.ribbon-button-bar--gap-loose {
+  gap: var(--ribbon-space-3);
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon-button-bar {
+  background-color: var(--ribbon-bg-primary);
+  border-top-color: var(--ribbon-border-color);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon-button-bar {
+  border-width: 2px;
+}
