@@ -90,3 +90,7 @@ export type { SidebarProps, SidebarTab } from './Sidebar/Sidebar';
 // ButtonBar
 export { ButtonBar } from './ButtonBar/ButtonBar';
 export type { ButtonBarProps, ButtonBarAction, ButtonBarPreset } from './ButtonBar/ButtonBar';
+
+// Ribbon
+export { Ribbon } from './Ribbon/Ribbon';
+export type { RibbonProps, RibbonTab, RibbonGroup, RibbonControl } from './Ribbon/Ribbon';

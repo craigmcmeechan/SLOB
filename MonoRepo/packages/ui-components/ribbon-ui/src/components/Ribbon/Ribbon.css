@@ -1,0 +1,301 @@
+/* ============================================================================
+   Ribbon Component Styles
+   ============================================================================ */
+
+.ribbon {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ribbon-bg-primary);
+  border-bottom: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  width: 100%;
+  user-select: none;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}
+
+/* ============================================================================
+   Ribbon Tab List
+   ============================================================================ */
+
+.ribbon__tab-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background-color: var(--ribbon-bg-secondary);
+  border-bottom: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ============================================================================
+   Ribbon Tab Button
+   ============================================================================ */
+
+.ribbon__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ribbon-space-1);
+  padding: var(--ribbon-space-3) var(--ribbon-space-4);
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--ribbon-text-secondary);
+  font-size: var(--ribbon-font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ribbon__tab:hover:not(:disabled) {
+  color: var(--ribbon-text-primary);
+  background-color: var(--ribbon-bg-tertiary);
+}
+
+.ribbon__tab--active {
+  color: var(--ribbon-text-primary);
+  border-bottom-color: var(--ribbon-primary);
+  font-weight: 600;
+  background-color: var(--ribbon-bg-primary);
+}
+
+.ribbon__tab:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon__tab:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: -2px;
+}
+
+/* ============================================================================
+   Ribbon Tab Icon and Label
+   ============================================================================ */
+
+.ribbon__tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+}
+
+.ribbon__tab-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================================
+   Ribbon Collapse Button
+   ============================================================================ */
+
+.ribbon__collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: var(--ribbon-text-secondary);
+  cursor: pointer;
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.ribbon__collapse-btn:hover {
+  color: var(--ribbon-text-primary);
+  background-color: var(--ribbon-bg-tertiary);
+}
+
+.ribbon__collapse-btn:focus-visible {
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: -2px;
+}
+
+.ribbon__collapse-icon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* ============================================================================
+   Ribbon Collapsed State
+   ============================================================================ */
+
+.ribbon--collapsed .ribbon__content {
+  display: none;
+}
+
+/* ============================================================================
+   Ribbon Content Area
+   ============================================================================ */
+
+.ribbon__content {
+  background-color: var(--ribbon-bg-primary);
+  padding: var(--ribbon-space-2);
+  min-height: 100px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ============================================================================
+   Ribbon Groups Container
+   ============================================================================ */
+
+.ribbon__groups {
+  display: flex;
+  gap: var(--ribbon-space-3);
+  align-items: flex-start;
+}
+
+/* ============================================================================
+   Ribbon Group
+   ============================================================================ */
+
+.ribbon__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-2);
+  padding: var(--ribbon-space-2) var(--ribbon-space-3);
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  border-radius: var(--ribbon-border-radius-sm);
+  background-color: var(--ribbon-bg-secondary);
+  min-width: 200px;
+}
+
+.ribbon--compact .ribbon__group {
+  min-width: 150px;
+  padding: var(--ribbon-space-1) var(--ribbon-space-2);
+}
+
+.ribbon--large .ribbon__group {
+  min-width: 250px;
+  padding: var(--ribbon-space-3) var(--ribbon-space-4);
+}
+
+/* ============================================================================
+   Ribbon Group Header
+   ============================================================================ */
+
+.ribbon__group-header {
+  border-bottom: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+  padding-bottom: var(--ribbon-space-1);
+}
+
+.ribbon__group-label {
+  margin: 0;
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* ============================================================================
+   Ribbon Group Controls
+   ============================================================================ */
+
+.ribbon__group-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-space-1);
+  align-items: stretch;
+}
+
+.ribbon__group-controls > button {
+  width: 100%;
+}
+
+/* ============================================================================
+   Ribbon Separator
+   ============================================================================ */
+
+.ribbon__separator {
+  width: 1px;
+  height: 24px;
+  background-color: var(--ribbon-border-color);
+  opacity: 0.3;
+  margin: 0 var(--ribbon-space-1);
+}
+
+/* ============================================================================
+   Ribbon Label
+   ============================================================================ */
+
+.ribbon__label {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  padding: var(--ribbon-space-1) 0;
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   Ribbon Sizing
+   ============================================================================ */
+
+.ribbon--compact .ribbon__content {
+  padding: var(--ribbon-space-1);
+  min-height: 80px;
+}
+
+.ribbon--large .ribbon__content {
+  padding: var(--ribbon-space-3);
+  min-height: 120px;
+}
+
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-dark .ribbon {
+  background-color: var(--ribbon-bg-primary);
+  border-bottom-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon__tab-list {
+  background-color: var(--ribbon-bg-secondary);
+  border-bottom-color: var(--ribbon-border-color);
+}
+
+.ribbon-dark .ribbon__tab {
+  color: var(--ribbon-text-secondary);
+}
+
+.ribbon-dark .ribbon__tab:hover {
+  color: var(--ribbon-text-primary);
+  background-color: var(--ribbon-bg-tertiary);
+}
+
+.ribbon-dark .ribbon__group {
+  background-color: var(--ribbon-bg-secondary);
+  border-color: var(--ribbon-border-color);
+}
+
+/* ============================================================================
+   Accessible Theme
+   ============================================================================ */
+
+.ribbon-accessible .ribbon {
+  border-bottom-width: 2px;
+}
+
+.ribbon-accessible .ribbon__tab-list {
+  border-bottom-width: 2px;
+}
+
+.ribbon-accessible .ribbon__tab {
+  border-bottom-width: 4px;
+}
+
+.ribbon-accessible .ribbon__group {
+  border-width: 2px;
+}
+
+.ribbon-accessible .ribbon__tab:focus-visible {
+  outline-width: 3px;
+}
