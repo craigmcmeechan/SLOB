@@ -1,0 +1,52 @@
+<!-- Gallery Control -->
+
+<div class="ribbon-gallery">
+  <div class="ribbon-gallery_grid">
+    <div class="ribbon-gallery_item">
+      <img src="item1.png" alt="Item 1" />
+    </div>
+    <div class="ribbon-gallery_item ribbon-gallery_item--selected">
+      <img src="item2.png" alt="Item 2" />
+    </div>
+    <div class="ribbon-gallery_item">
+      <img src="item3.png" alt="Item 3" />
+    </div>
+  </div>
+</div>
+
+<style>
+.ribbon-gallery {
+  padding: var(--ribbon-padding);
+}
+
+.ribbon-gallery_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--ribbon-gap);
+}
+
+.ribbon-gallery_item {
+  aspect-ratio: 1;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-gallery_item:hover {
+  border-color: var(--ribbon-primary);
+  box-shadow: var(--ribbon-shadow);
+}
+
+.ribbon-gallery_item--selected {
+  border: 2px solid var(--ribbon-primary);
+  box-shadow: 0 0 0 2px var(--ribbon-primary);
+}
+
+.ribbon-gallery_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>

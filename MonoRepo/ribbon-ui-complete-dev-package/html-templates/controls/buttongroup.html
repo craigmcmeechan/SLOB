@@ -1,0 +1,26 @@
+<!-- Button Group Container -->
+
+<div class="ribbon-button-group">
+  <button class="ribbon-button ribbon-button-group_item">Left</button>
+  <button class="ribbon-button ribbon-button-group_item">Center</button>
+  <button class="ribbon-button ribbon-button-group_item">Right</button>
+</div>
+
+<style>
+.ribbon-button-group {
+  display: flex;
+  gap: 0;
+  border-radius: var(--ribbon-border-radius);
+  overflow: hidden;
+}
+
+.ribbon-button-group_item {
+  border-radius: 0;
+  border-right: none;
+  flex: 1;
+}
+
+.ribbon-button-group_item:last-child {
+  border-right: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+</style>

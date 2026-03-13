@@ -1,0 +1,145 @@
+<!-- RibbonWindow - Application Container -->
+
+<div class="ribbon-window ribbon-window--root" role="application" aria-label="Application">
+  <!-- Title Bar -->
+  <header class="ribbon-window_titlebar">
+    <span class="ribbon-window_titlebar_title">Application Title</span>
+    <div class="ribbon-window_controls">
+      <button class="ribbon-window_control ribbon-window_control--minimize" aria-label="Minimize">
+        −
+      </button>
+      <button class="ribbon-window_control ribbon-window_control--maximize" aria-label="Maximize">
+        □
+      </button>
+      <button class="ribbon-window_control ribbon-window_control--close" aria-label="Close">
+        ✕
+      </button>
+    </div>
+  </header>
+
+  <!-- Ribbon UI (optional) -->
+  <nav class="ribbon-window_ribbon">
+    <!-- Ribbon content -->
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="ribbon-window_layout">
+    <!-- Left Sidebar (optional) -->
+    <aside class="ribbon-window_sidebar ribbon-window_sidebar--left">
+      <!-- Sidebar content -->
+    </aside>
+
+    <!-- Content Area -->
+    <main class="ribbon-window_content">
+      <h1>Main Content Area</h1>
+      <p>Application content goes here</p>
+    </main>
+
+    <!-- Right Sidebar (optional) -->
+    <aside class="ribbon-window_sidebar ribbon-window_sidebar--right">
+      <!-- Sidebar content -->
+    </aside>
+  </div>
+
+  <!-- Button Bar (optional) -->
+  <footer class="ribbon-window_button-bar">
+    <!-- Button bar content -->
+  </footer>
+
+  <!-- Status Bar (optional) -->
+  <footer class="ribbon-window_status-bar">
+    <span class="ribbon-window_status-bar_item">Ready</span>
+  </footer>
+</div>
+
+<style>
+.ribbon-window {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--ribbon-font-family);
+  background-color: var(--ribbon-surface);
+  color: var(--ribbon-text);
+}
+
+.ribbon-window_titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  padding: var(--ribbon-padding);
+  background-color: var(--ribbon-surface-variant);
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+  user-select: none;
+}
+
+.ribbon-window_titlebar_title {
+  font-weight: var(--ribbon-font-weight-medium);
+  font-size: var(--ribbon-font-size);
+}
+
+.ribbon-window_controls {
+  display: flex;
+  gap: var(--ribbon-gap);
+}
+
+.ribbon-window_control {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-window_ribbon {
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+
+.ribbon-window_layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ribbon-window_sidebar {
+  width: 250px;
+  border-right: var(--ribbon-border-width) solid var(--ribbon-border);
+  overflow-y: auto;
+}
+
+.ribbon-window_sidebar--right {
+  border-right: none;
+  border-left: var(--ribbon-border-width) solid var(--ribbon-border);
+  order: 3;
+}
+
+.ribbon-window_content {
+  flex: 1;
+  overflow: auto;
+  padding: var(--ribbon-padding-md);
+}
+
+.ribbon-window_button-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding);
+  border-top: var(--ribbon-border-width) solid var(--ribbon-border);
+  background-color: var(--ribbon-surface-variant);
+  height: 40px;
+}
+
+.ribbon-window_status-bar {
+  height: 20px;
+  padding: 0 var(--ribbon-padding);
+  border-top: var(--ribbon-border-width) solid var(--ribbon-border);
+  background-color: var(--ribbon-surface-variant);
+  display: flex;
+  align-items: center;
+  font-size: var(--ribbon-font-size-xs);
+}
+</style>

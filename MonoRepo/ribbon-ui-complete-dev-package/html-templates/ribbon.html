@@ -1,0 +1,110 @@
+<!-- Ribbon UI - Office-style Tab Interface -->
+
+<div class="ribbon-ui">
+  <!-- Tab Bar -->
+  <div class="ribbon-ui_tab-bar">
+    <button class="ribbon-ui_tab ribbon-ui_tab--active" role="tab" aria-selected="true">
+      Home
+    </button>
+    <button class="ribbon-ui_tab" role="tab" aria-selected="false">
+      Insert
+    </button>
+    <button class="ribbon-ui_tab" role="tab" aria-selected="false">
+      Design
+    </button>
+  </div>
+
+  <!-- Tab Panels -->
+  <div class="ribbon-ui_tab-panel">
+    <!-- Groups -->
+    <div class="ribbon-ui_group">
+      <div class="ribbon-ui_group_label">Clipboard</div>
+      <div class="ribbon-ui_group_controls">
+        <button class="ribbon-button">
+          <span class="ribbon-button_icon">📋</span>
+          <span class="ribbon-button_label">Paste</span>
+        </button>
+        <button class="ribbon-button">
+          <span class="ribbon-button_icon">✂️</span>
+          <span class="ribbon-button_label">Cut</span>
+        </button>
+        <button class="ribbon-button">
+          <span class="ribbon-button_icon">📋</span>
+          <span class="ribbon-button_label">Copy</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ribbon-ui_group-separator"></div>
+
+    <div class="ribbon-ui_group">
+      <div class="ribbon-ui_group_label">Formatting</div>
+      <div class="ribbon-ui_group_controls">
+        <button class="ribbon-button">Bold</button>
+        <button class="ribbon-button">Italic</button>
+        <button class="ribbon-button">Underline</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.ribbon-ui {
+  background-color: var(--ribbon-surface);
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+
+.ribbon-ui_tab-bar {
+  display: flex;
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+  background-color: var(--ribbon-surface-variant);
+}
+
+.ribbon-ui_tab {
+  padding: var(--ribbon-padding) var(--ribbon-padding-lg);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--ribbon-font-size);
+  white-space: nowrap;
+}
+
+.ribbon-ui_tab--active {
+  border-bottom: 3px solid var(--ribbon-primary);
+  background-color: var(--ribbon-surface);
+  color: var(--ribbon-primary);
+}
+
+.ribbon-ui_tab-panel {
+  display: flex;
+  padding: var(--ribbon-padding);
+  gap: var(--ribbon-gap-lg);
+  align-items: flex-start;
+}
+
+.ribbon-ui_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ribbon-gap-sm);
+}
+
+.ribbon-ui_group_label {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-secondary);
+  text-align: center;
+  min-width: 60px;
+}
+
+.ribbon-ui_group_controls {
+  display: flex;
+  gap: var(--ribbon-gap);
+  flex-wrap: wrap;
+}
+
+.ribbon-ui_group-separator {
+  width: 1px;
+  height: 40px;
+  background-color: var(--ribbon-border);
+}
+</style>

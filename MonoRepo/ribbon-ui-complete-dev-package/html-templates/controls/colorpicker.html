@@ -1,0 +1,36 @@
+<!-- Color Picker Control -->
+
+<div class="ribbon-color-picker">
+  <input type="color" class="ribbon-color-picker_input" value="#4472C4" />
+  <span class="ribbon-color-picker_display" style="background-color: #4472C4;"></span>
+  <span class="ribbon-color-picker_label">#4472C4</span>
+</div>
+
+<style>
+.ribbon-color-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+}
+
+.ribbon-color-picker_input {
+  width: 40px;
+  height: 32px;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  cursor: pointer;
+}
+
+.ribbon-color-picker_display {
+  width: 32px;
+  height: 32px;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+}
+
+.ribbon-color-picker_label {
+  font-size: var(--ribbon-font-size-sm);
+  font-family: monospace;
+  color: var(--ribbon-text-secondary);
+}
+</style>

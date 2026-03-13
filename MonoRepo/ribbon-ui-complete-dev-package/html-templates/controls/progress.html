@@ -1,0 +1,46 @@
+<!-- Progress Control -->
+
+<!-- Default Progress -->
+<div class="ribbon-progress">
+  <div class="ribbon-progress_bar" style="width: 50%;"></div>
+</div>
+
+<!-- With Label -->
+<div class="ribbon-progress-labeled">
+  <span>Loading:</span>
+  <div class="ribbon-progress">
+    <div class="ribbon-progress_bar" style="width: 75%;"></div>
+  </div>
+  <span>75%</span>
+</div>
+
+<!-- Success State -->
+<div class="ribbon-progress">
+  <div class="ribbon-progress_bar ribbon-progress_bar--success" style="width: 100%;"></div>
+</div>
+
+<style>
+.ribbon-progress {
+  width: 200px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ribbon-border);
+  overflow: hidden;
+}
+
+.ribbon-progress_bar {
+  height: 100%;
+  background-color: var(--ribbon-primary);
+  transition: width var(--ribbon-transition);
+}
+
+.ribbon-progress_bar--success {
+  background-color: var(--ribbon-success);
+}
+
+.ribbon-progress-labeled {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap-md);
+}
+</style>

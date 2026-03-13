@@ -1,0 +1,57 @@
+<!-- Menu Control -->
+
+<div class="ribbon-menu">
+  <div class="ribbon-menu_item">
+    <span class="ribbon-menu_icon">📄</span>
+    <span>New</span>
+  </div>
+  <div class="ribbon-menu_item">
+    <span class="ribbon-menu_icon">📂</span>
+    <span>Open</span>
+  </div>
+  <div class="ribbon-menu_divider"></div>
+  <div class="ribbon-menu_item ribbon-menu_item--disabled">
+    <span class="ribbon-menu_icon">⚙️</span>
+    <span>Settings</span>
+  </div>
+</div>
+
+<style>
+.ribbon-menu {
+  min-width: 150px;
+  background-color: var(--ribbon-surface);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  overflow: hidden;
+}
+
+.ribbon-menu_item {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding) var(--ribbon-padding-md);
+  cursor: pointer;
+  transition: background-color var(--ribbon-transition-fast);
+}
+
+.ribbon-menu_item:hover:not(.ribbon-menu_item--disabled) {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-menu_item--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon-menu_icon {
+  width: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.ribbon-menu_divider {
+  height: 1px;
+  background-color: var(--ribbon-border);
+  margin: 2px 0;
+}
+</style>

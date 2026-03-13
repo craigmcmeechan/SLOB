@@ -1,0 +1,36 @@
+<!-- Segmented Control -->
+
+<div class="ribbon-segmented">
+  <button class="ribbon-segmented_item ribbon-segmented_item--active">List</button>
+  <button class="ribbon-segmented_item">Grid</button>
+  <button class="ribbon-segmented_item">Details</button>
+</div>
+
+<style>
+.ribbon-segmented {
+  display: inline-flex;
+  background-color: var(--ribbon-surface-variant);
+  border-radius: var(--ribbon-border-radius);
+  padding: 2px;
+  gap: 2px;
+}
+
+.ribbon-segmented_item {
+  padding: var(--ribbon-padding) var(--ribbon-padding-md);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--ribbon-border-radius);
+  transition: all var(--ribbon-transition-fast);
+  font-size: var(--ribbon-font-size-sm);
+}
+
+.ribbon-segmented_item:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-segmented_item--active {
+  background-color: var(--ribbon-surface);
+  box-shadow: var(--ribbon-shadow-sm);
+}
+</style>

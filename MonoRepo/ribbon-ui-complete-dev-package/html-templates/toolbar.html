@@ -1,0 +1,49 @@
+<!-- Toolbar - Simplified Control Bar -->
+
+<div class="ribbon-toolbar">
+  <!-- Group 1 -->
+  <div class="ribbon-toolbar_group">
+    <button class="ribbon-button ribbon-button--small">📋 Paste</button>
+    <button class="ribbon-button ribbon-button--small">✂️ Cut</button>
+    <button class="ribbon-button ribbon-button--small">📋 Copy</button>
+  </div>
+
+  <div class="ribbon-toolbar_separator"></div>
+
+  <!-- Group 2 -->
+  <div class="ribbon-toolbar_group">
+    <button class="ribbon-button ribbon-button--small">↶ Undo</button>
+    <button class="ribbon-button ribbon-button--small">↷ Redo</button>
+  </div>
+
+  <div class="ribbon-toolbar_separator"></div>
+
+  <!-- Group 3 -->
+  <div class="ribbon-toolbar_group">
+    <input type="text" class="ribbon-input" placeholder="Search..." />
+  </div>
+</div>
+
+<style>
+.ribbon-toolbar {
+  display: flex;
+  gap: var(--ribbon-gap-md);
+  padding: var(--ribbon-padding);
+  background-color: var(--ribbon-surface);
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ribbon-toolbar_group {
+  display: flex;
+  gap: var(--ribbon-gap);
+  align-items: center;
+}
+
+.ribbon-toolbar_separator {
+  width: 1px;
+  height: 24px;
+  background-color: var(--ribbon-border);
+}
+</style>

@@ -1,0 +1,40 @@
+<!-- Icon Control -->
+
+<!-- Small Icon -->
+<span class="ribbon-icon ribbon-icon--small">🔒</span>
+
+<!-- Medium Icon (default) -->
+<span class="ribbon-icon">📝</span>
+
+<!-- Large Icon -->
+<span class="ribbon-icon ribbon-icon--large">💾</span>
+
+<!-- Colored Icon -->
+<span class="ribbon-icon ribbon-icon--primary">⭐</span>
+
+<style>
+.ribbon-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ribbon-size-medium);
+  height: var(--ribbon-size-medium);
+  font-size: var(--ribbon-size-medium);
+}
+
+.ribbon-icon--small {
+  width: var(--ribbon-size-small);
+  height: var(--ribbon-size-small);
+  font-size: var(--ribbon-size-small);
+}
+
+.ribbon-icon--large {
+  width: var(--ribbon-size-large);
+  height: var(--ribbon-size-large);
+  font-size: var(--ribbon-size-large);
+}
+
+.ribbon-icon--primary {
+  color: var(--ribbon-primary);
+}
+</style>

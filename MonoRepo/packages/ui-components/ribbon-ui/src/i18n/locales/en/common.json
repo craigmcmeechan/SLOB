@@ -1,0 +1,71 @@
+{
+  "ribbon": {
+    "home": "Home",
+    "insert": "Insert",
+    "design": "Design",
+    "layout": "Layout",
+    "references": "References",
+    "mailings": "Mailings",
+    "review": "Review",
+    "view": "View",
+    "help": "Help"
+  },
+  "ribbonGroups": {
+    "clipboard": "Clipboard",
+    "font": "Font",
+    "paragraph": "Paragraph",
+    "styles": "Styles",
+    "editing": "Editing"
+  },
+  "controls": {
+    "paste": "Paste",
+    "cut": "Cut",
+    "copy": "Copy",
+    "format": "Format",
+    "clear": "Clear",
+    "undo": "Undo",
+    "redo": "Redo",
+    "save": "Save",
+    "open": "Open",
+    "new": "New",
+    "print": "Print",
+    "close": "Close",
+    "exit": "Exit"
+  },
+  "manufacturing": {
+    "quote": "Quote",
+    "job": "Job",
+    "production": "Production",
+    "delivery": "Delivery",
+    "finance": "Finance",
+    "specification": "Specification",
+    "batchManagement": "Batch Management",
+    "scheduling": "Scheduling",
+    "qualityControl": "Quality Control",
+    "inventory": "Inventory"
+  },
+  "messages": {
+    "welcome": "Welcome to Ribbon UI",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "saved": "Saved successfully",
+    "error": "An error occurred",
+    "warning": "Warning",
+    "info": "Information",
+    "success": "Success",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK"
+  },
+  "accessibility": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleSidebar": "Toggle sidebar",
+    "collapseRibbon": "Collapse ribbon",
+    "expandRibbon": "Expand ribbon",
+    "focusContent": "Focus main content",
+    "skipToContent": "Skip to main content"
+  }
+}

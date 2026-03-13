@@ -1,0 +1,143 @@
+{
+  "name": "OnlyOffice-Inspired Theme System",
+  "version": "1.0.0",
+  "description": "Professional office-style themes inspired by ONLYOFFICE products",
+  "themes": {
+    "light": {
+      "id": "light",
+      "name": "Light (Default)",
+      "type": "light",
+      "description": "Professional light theme matching ONLYOFFICE default styling",
+      "colors": {
+        "primary": "#4472C4",
+        "primaryHover": "#3660A8",
+        "primaryActive": "#2D4E8C",
+        "secondary": "#70AD47",
+        "accent": "#FFC000",
+        "success": "#70AD47",
+        "warning": "#FFC000",
+        "error": "#C5504F",
+        "info": "#4472C4",
+        "surface": "#FFFFFF",
+        "surfaceVariant": "#F5F5F5",
+        "onSurface": "#262626",
+        "border": "#D9D9D9",
+        "background": "#FFFFFF"
+      }
+    },
+    "dark": {
+      "id": "dark",
+      "name": "Dark",
+      "type": "dark",
+      "description": "Professional dark theme for reduced eye strain",
+      "colors": {
+        "primary": "#5B9BD5",
+        "primaryHover": "#6BA9DB",
+        "primaryActive": "#4A8BC2",
+        "secondary": "#92D050",
+        "accent": "#FFD966",
+        "success": "#92D050",
+        "warning": "#FFD966",
+        "error": "#E74C3C",
+        "info": "#5B9BD5",
+        "surface": "#2D2D30",
+        "surfaceVariant": "#3E3E42",
+        "onSurface": "#CCCCCC",
+        "border": "#565656",
+        "background": "#1E1E1E"
+      }
+    },
+    "highContrast": {
+      "id": "high-contrast",
+      "name": "High Contrast",
+      "type": "light",
+      "description": "High contrast theme for improved accessibility (WCAG AAA)",
+      "colors": {
+        "primary": "#0052CC",
+        "primaryHover": "#0040A1",
+        "primaryActive": "#002E7A",
+        "secondary": "#008000",
+        "accent": "#FF6600",
+        "success": "#008000",
+        "warning": "#FF6600",
+        "error": "#CC0000",
+        "info": "#0052CC",
+        "surface": "#FFFFFF",
+        "surfaceVariant": "#F0F0F0",
+        "onSurface": "#000000",
+        "border": "#000000",
+        "background": "#FFFFFF"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "default": "'Segoe UI', 'Liberation Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif",
+      "mono": "'Consolas', 'Monaco', 'Courier New', monospace"
+    },
+    "fontSize": {
+      "xs": "11px",
+      "sm": "12px",
+      "base": "13px",
+      "lg": "14px",
+      "xl": "15px",
+      "2xl": "16px",
+      "3xl": "18px",
+      "4xl": "20px"
+    },
+    "fontWeight": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "spacing": {
+    "xs": "2px",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "2xl": "20px",
+    "3xl": "24px",
+    "4xl": "32px"
+  },
+  "borderRadius": {
+    "none": "0px",
+    "sm": "2px",
+    "base": "4px",
+    "md": "6px",
+    "lg": "8px"
+  },
+  "components": {
+    "button": {
+      "padding": "6px 12px",
+      "borderRadius": "2px",
+      "fontSize": "13px",
+      "minHeight": "24px"
+    },
+    "input": {
+      "padding": "6px 8px",
+      "borderRadius": "2px",
+      "fontSize": "13px",
+      "minHeight": "24px"
+    },
+    "ribbon": {
+      "height": "96px",
+      "tabHeight": "20px",
+      "groupPadding": "8px",
+      "groupLabelFontSize": "11px"
+    },
+    "window": {
+      "titlebarHeight": "30px",
+      "minWidth": "300px",
+      "minHeight": "200px"
+    }
+  },
+  "accessibility": {
+    "focusOutlineColor": "#4472C4",
+    "focusOutlineWidth": "2px",
+    "minTouchTarget": "48px",
+    "minTextContrast": "4.5:1"
+  }
+}

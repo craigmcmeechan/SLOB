@@ -1,0 +1,82 @@
+<!-- Tabbed Sidebar - Navigation Panel -->
+
+<div class="ribbon-sidebar">
+  <!-- Tab Bar -->
+  <div class="ribbon-sidebar_tabs">
+    <button class="ribbon-sidebar_tab ribbon-sidebar_tab--active" role="tab" aria-selected="true">
+      <span class="ribbon-sidebar_tab_icon">📂</span>
+      <span class="ribbon-sidebar_tab_label">Explorer</span>
+    </button>
+    <button class="ribbon-sidebar_tab" role="tab" aria-selected="false">
+      <span class="ribbon-sidebar_tab_icon">⚙️</span>
+      <span class="ribbon-sidebar_tab_label">Properties</span>
+    </button>
+  </div>
+
+  <!-- Content Area -->
+  <div class="ribbon-sidebar_content">
+    <div class="ribbon-sidebar_item">
+      <span class="ribbon-sidebar_item_icon">📄</span>
+      <span>Document 1</span>
+    </div>
+    <div class="ribbon-sidebar_item ribbon-sidebar_item--selected">
+      <span class="ribbon-sidebar_item_icon">📄</span>
+      <span>Document 2</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.ribbon-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: var(--ribbon-surface-variant);
+  border-right: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+
+.ribbon-sidebar_tabs {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+
+.ribbon-sidebar_tab {
+  display: flex;
+  gap: var(--ribbon-gap-sm);
+  align-items: center;
+  padding: var(--ribbon-padding);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--ribbon-font-size-sm);
+}
+
+.ribbon-sidebar_tab--active {
+  background-color: var(--ribbon-surface);
+  border-left: 3px solid var(--ribbon-primary);
+  padding-left: calc(var(--ribbon-padding) - 3px);
+}
+
+.ribbon-sidebar_content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--ribbon-padding-sm);
+}
+
+.ribbon-sidebar_item {
+  padding: var(--ribbon-padding-sm);
+  cursor: pointer;
+  display: flex;
+  gap: var(--ribbon-gap-sm);
+  align-items: center;
+  font-size: var(--ribbon-font-size-sm);
+}
+
+.ribbon-sidebar_item--selected {
+  background-color: var(--ribbon-primary);
+  color: white;
+  border-radius: var(--ribbon-border-radius);
+}
+</style>

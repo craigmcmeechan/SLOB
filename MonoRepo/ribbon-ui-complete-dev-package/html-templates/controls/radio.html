@@ -1,0 +1,61 @@
+<!-- Radio Button Control -->
+
+<!-- Unchecked -->
+<label class="ribbon-radio">
+  <input type="radio" class="ribbon-radio_input" name="option" />
+  <span class="ribbon-radio_circle"></span>
+  <span class="ribbon-radio_label">Option 1</span>
+</label>
+
+<!-- Checked -->
+<label class="ribbon-radio">
+  <input type="radio" class="ribbon-radio_input" name="option" checked />
+  <span class="ribbon-radio_circle"><span class="ribbon-radio_dot"></span></span>
+  <span class="ribbon-radio_label">Option 2</span>
+</label>
+
+<style>
+.ribbon-radio {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ribbon-radio_input {
+  display: none;
+}
+
+.ribbon-radio_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: 50%;
+  background-color: var(--ribbon-surface);
+  flex-shrink: 0;
+}
+
+.ribbon-radio_dot {
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--ribbon-primary);
+}
+
+.ribbon-radio_input:checked ~ .ribbon-radio_circle {
+  border-color: var(--ribbon-primary);
+}
+
+.ribbon-radio_input:checked ~ .ribbon-radio_circle .ribbon-radio_dot {
+  display: block;
+}
+
+.ribbon-radio_label {
+  font-size: var(--ribbon-font-size);
+}
+</style>

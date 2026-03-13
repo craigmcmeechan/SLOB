@@ -1,0 +1,74 @@
+/* ============================================================================
+   Dark Theme
+   ============================================================================ */
+
+.ribbon-theme-dark {
+  color-scheme: dark;
+
+  /* Primary Colors */
+  --ribbon-primary: #ecf0f1;
+  --ribbon-primary-hover: #d5dbdb;
+  --ribbon-primary-active: #bbb8b8;
+
+  /* Background Colors */
+  --ribbon-bg-primary: #1e1e1e;
+  --ribbon-bg-secondary: #2d2d2d;
+  --ribbon-bg-tertiary: #3a3a3a;
+  --ribbon-bg-hover: #383838;
+  --ribbon-bg-active: #4a4a4a;
+
+  /* Border Colors */
+  --ribbon-border-color: #555555;
+  --ribbon-border-color-light: #666666;
+  --ribbon-border-color-dark: #333333;
+
+  /* Text Colors */
+  --ribbon-text-primary: #ecf0f1;
+  --ribbon-text-secondary: #bdc3c7;
+  --ribbon-text-tertiary: #95a5a6;
+  --ribbon-text-disabled: #5a6b6f;
+  --ribbon-text-inverse: #1e1e1e;
+
+  /* Accent Colors */
+  --ribbon-accent: #e74c3c;
+  --ribbon-accent-hover: #f1603f;
+
+  /* Status Colors */
+  --ribbon-success: #27ae60;
+  --ribbon-warning: #f39c12;
+  --ribbon-error: #e74c3c;
+  --ribbon-info: #3498db;
+
+  /* Shadows (more visible in dark) */
+  --ribbon-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --ribbon-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --ribbon-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --ribbon-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark theme inherited globally */
+html.ribbon-dark,
+body.ribbon-dark,
+.ribbon-dark {
+  color-scheme: dark;
+  --ribbon-primary: #ecf0f1;
+  --ribbon-primary-hover: #d5dbdb;
+  --ribbon-primary-active: #bbb8b8;
+  --ribbon-bg-primary: #1e1e1e;
+  --ribbon-bg-secondary: #2d2d2d;
+  --ribbon-bg-tertiary: #3a3a3a;
+  --ribbon-bg-hover: #383838;
+  --ribbon-bg-active: #4a4a4a;
+  --ribbon-border-color: #555555;
+  --ribbon-border-color-light: #666666;
+  --ribbon-border-color-dark: #333333;
+  --ribbon-text-primary: #ecf0f1;
+  --ribbon-text-secondary: #bdc3c7;
+  --ribbon-text-tertiary: #95a5a6;
+  --ribbon-text-disabled: #5a6b6f;
+  --ribbon-text-inverse: #1e1e1e;
+  --ribbon-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --ribbon-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --ribbon-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --ribbon-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,31 @@
+<!-- Split Button Control -->
+
+<div class="ribbon-split-button">
+  <button class="ribbon-button ribbon-split-button_primary">
+    <span>Action</span>
+  </button>
+  <button class="ribbon-button ribbon-split-button_dropdown" aria-label="More options">
+    ▼
+  </button>
+</div>
+
+<style>
+.ribbon-split-button {
+  display: inline-flex;
+  gap: 0;
+  border-radius: var(--ribbon-border-radius);
+  overflow: hidden;
+}
+
+.ribbon-split-button_primary,
+.ribbon-split-button_dropdown {
+  border-radius: 0;
+  border-right: none;
+}
+
+.ribbon-split-button_dropdown {
+  width: 32px;
+  padding: var(--ribbon-padding);
+  border-right: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+</style>

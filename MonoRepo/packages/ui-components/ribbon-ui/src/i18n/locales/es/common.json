@@ -1,0 +1,71 @@
+{
+  "ribbon": {
+    "home": "Inicio",
+    "insert": "Insertar",
+    "design": "Diseño",
+    "layout": "Diseño de página",
+    "references": "Referencias",
+    "mailings": "Correspondencia",
+    "review": "Revisar",
+    "view": "Ver",
+    "help": "Ayuda"
+  },
+  "ribbonGroups": {
+    "clipboard": "Portapapeles",
+    "font": "Fuente",
+    "paragraph": "Párrafo",
+    "styles": "Estilos",
+    "editing": "Edición"
+  },
+  "controls": {
+    "paste": "Pegar",
+    "cut": "Cortar",
+    "copy": "Copiar",
+    "format": "Formato",
+    "clear": "Limpiar",
+    "undo": "Deshacer",
+    "redo": "Rehacer",
+    "save": "Guardar",
+    "open": "Abrir",
+    "new": "Nuevo",
+    "print": "Imprimir",
+    "close": "Cerrar",
+    "exit": "Salir"
+  },
+  "manufacturing": {
+    "quote": "Presupuesto",
+    "job": "Trabajo",
+    "production": "Producción",
+    "delivery": "Entrega",
+    "finance": "Finanzas",
+    "specification": "Especificación",
+    "batchManagement": "Gestión de lotes",
+    "scheduling": "Programación",
+    "qualityControl": "Control de calidad",
+    "inventory": "Inventario"
+  },
+  "messages": {
+    "welcome": "Bienvenido a Ribbon UI",
+    "loading": "Cargando...",
+    "saving": "Guardando...",
+    "saved": "Guardado exitosamente",
+    "error": "Ocurrió un error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "Aceptar"
+  },
+  "accessibility": {
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "toggleSidebar": "Alternar barra lateral",
+    "collapseRibbon": "Contraer cinta",
+    "expandRibbon": "Expandir cinta",
+    "focusContent": "Enfocar contenido principal",
+    "skipToContent": "Ir al contenido principal"
+  }
+}

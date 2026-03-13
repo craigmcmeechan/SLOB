@@ -1,0 +1,65 @@
+<!-- Combobox Control -->
+
+<div class="ribbon-combobox">
+  <input type="text" class="ribbon-combobox_input" placeholder="Select or type..." />
+  <button class="ribbon-combobox_dropdown" aria-label="Open dropdown">▼</button>
+  <div class="ribbon-combobox_list">
+    <div class="ribbon-combobox_item">Option 1</div>
+    <div class="ribbon-combobox_item ribbon-combobox_item--selected">Option 2</div>
+    <div class="ribbon-combobox_item">Option 3</div>
+  </div>
+</div>
+
+<style>
+.ribbon-combobox {
+  position: relative;
+  display: inline-flex;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  background-color: var(--ribbon-surface);
+}
+
+.ribbon-combobox_input {
+  flex: 1;
+  padding: var(--ribbon-padding);
+  border: none;
+  background: transparent;
+  font-size: var(--ribbon-font-size);
+}
+
+.ribbon-combobox_dropdown {
+  padding: var(--ribbon-padding);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ribbon-text);
+}
+
+.ribbon-combobox_list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  background-color: var(--ribbon-surface);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.ribbon-combobox_item {
+  padding: var(--ribbon-padding);
+  cursor: pointer;
+  transition: background-color var(--ribbon-transition-fast);
+}
+
+.ribbon-combobox_item:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-combobox_item--selected {
+  background-color: var(--ribbon-primary);
+  color: white;
+}
+</style>

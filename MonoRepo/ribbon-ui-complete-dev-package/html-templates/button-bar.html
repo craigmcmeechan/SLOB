@@ -1,0 +1,25 @@
+<!-- Window Button Bar - Dialog Footer -->
+
+<div class="ribbon-button-bar">
+  <div class="ribbon-button-bar_container">
+    <button class="ribbon-button ribbon-button--primary">OK</button>
+    <button class="ribbon-button">Cancel</button>
+  </div>
+</div>
+
+<style>
+.ribbon-button-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--ribbon-padding);
+  border-top: var(--ribbon-border-width) solid var(--ribbon-border);
+  background-color: var(--ribbon-surface-variant);
+  height: 40px;
+}
+
+.ribbon-button-bar_container {
+  display: flex;
+  gap: var(--ribbon-gap);
+  align-items: center;
+}
+</style>

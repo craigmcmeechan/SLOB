@@ -1,0 +1,57 @@
+<!-- Text Input Control -->
+
+<!-- Basic Input -->
+<input type="text" class="ribbon-input" placeholder="Type here..." />
+
+<!-- With Label -->
+<label class="ribbon-input-group">
+  <span class="ribbon-input-group_label">Name:</span>
+  <input type="text" class="ribbon-input" />
+</label>
+
+<!-- Focused -->
+<input type="text" class="ribbon-input" placeholder="Focused" value="Focused input" />
+
+<!-- Disabled -->
+<input type="text" class="ribbon-input ribbon-input--disabled" disabled placeholder="Disabled" />
+
+<style>
+.ribbon-input {
+  padding: var(--ribbon-padding);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  font-size: var(--ribbon-font-size);
+  font-family: var(--ribbon-font-family);
+  background-color: var(--ribbon-surface);
+  color: var(--ribbon-text);
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-input:hover {
+  border-color: var(--ribbon-border-dark);
+}
+
+.ribbon-input:focus {
+  outline: none;
+  border-color: var(--ribbon-primary);
+  box-shadow: 0 0 0 3px rgba(68, 114, 196, 0.1);
+}
+
+.ribbon-input--disabled {
+  background-color: var(--ribbon-surface-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ribbon-input-group {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+}
+
+.ribbon-input-group_label {
+  font-size: var(--ribbon-font-size);
+  color: var(--ribbon-text-secondary);
+  white-space: nowrap;
+}
+</style>

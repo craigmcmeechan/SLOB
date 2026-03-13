@@ -1,0 +1,44 @@
+<!-- Number Input Control -->
+
+<div class="ribbon-number-input">
+  <button class="ribbon-number-input_btn" aria-label="Decrease">−</button>
+  <input type="number" class="ribbon-number-input_field" value="50" min="0" max="100" />
+  <button class="ribbon-number-input_btn" aria-label="Increase">+</button>
+</div>
+
+<style>
+.ribbon-number-input {
+  display: inline-flex;
+  align-items: center;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  background-color: var(--ribbon-surface);
+}
+
+.ribbon-number-input_field {
+  width: 60px;
+  padding: var(--ribbon-padding);
+  border: none;
+  text-align: center;
+  font-size: var(--ribbon-font-size);
+}
+
+.ribbon-number-input_field:focus {
+  outline: none;
+}
+
+.ribbon-number-input_btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-number-input_btn:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+</style>

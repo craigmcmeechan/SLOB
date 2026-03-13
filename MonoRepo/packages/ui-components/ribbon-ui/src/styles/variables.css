@@ -1,0 +1,215 @@
+/* ============================================================================
+   Ribbon UI - CSS Variables System
+   OnlyOffice Color Palette & Manufacturing Theme
+   ============================================================================ */
+
+:root {
+  /* ==================== COLORS ==================== */
+
+  /* Primary Colors */
+  --ribbon-primary: #2c3e50;
+  --ribbon-primary-hover: #34495e;
+  --ribbon-primary-active: #1a252f;
+  --ribbon-primary-light: #3498db;
+
+  /* Secondary Colors */
+  --ribbon-secondary: #7f8c8d;
+  --ribbon-secondary-hover: #95a5a6;
+  --ribbon-secondary-active: #5a6b6f;
+  --ribbon-secondary-light: #bdc3c7;
+
+  /* Accent Colors (Manufacturing theme) */
+  --ribbon-accent: #e74c3c;
+  --ribbon-accent-hover: #c0392b;
+  --ribbon-accent-light: #f39c12;
+
+  /* Success, Warning, Error, Info */
+  --ribbon-success: #27ae60;
+  --ribbon-success-hover: #229954;
+  --ribbon-warning: #f39c12;
+  --ribbon-warning-hover: #e67e22;
+  --ribbon-error: #e74c3c;
+  --ribbon-error-hover: #c0392b;
+  --ribbon-info: #3498db;
+  --ribbon-info-hover: #2980b9;
+
+  /* Neutral Colors */
+  --ribbon-black: #000000;
+  --ribbon-white: #ffffff;
+  --ribbon-gray-50: #f9fafb;
+  --ribbon-gray-100: #f3f4f6;
+  --ribbon-gray-200: #e5e7eb;
+  --ribbon-gray-300: #d1d5db;
+  --ribbon-gray-400: #9ca3af;
+  --ribbon-gray-500: #6b7280;
+  --ribbon-gray-600: #4b5563;
+  --ribbon-gray-700: #374151;
+  --ribbon-gray-800: #1f2937;
+  --ribbon-gray-900: #111827;
+
+  /* Background Colors */
+  --ribbon-bg-primary: #ffffff;
+  --ribbon-bg-secondary: #f5f5f5;
+  --ribbon-bg-tertiary: #e8e8e8;
+  --ribbon-bg-hover: #efefef;
+  --ribbon-bg-active: #d9d9d9;
+
+  /* Border Colors */
+  --ribbon-border-color: #cccccc;
+  --ribbon-border-color-light: #e0e0e0;
+  --ribbon-border-color-dark: #999999;
+
+  /* Text Colors */
+  --ribbon-text-primary: #333333;
+  --ribbon-text-secondary: #666666;
+  --ribbon-text-tertiary: #999999;
+  --ribbon-text-disabled: #cccccc;
+  --ribbon-text-inverse: #ffffff;
+
+  /* Focus/Selection Colors */
+  --ribbon-focus-color: #2980b9;
+  --ribbon-focus-shadow: rgba(41, 128, 185, 0.3);
+  --ribbon-selection-bg: #3498db;
+  --ribbon-selection-fg: #ffffff;
+
+  /* ==================== TYPOGRAPHY ==================== */
+
+  /* Font Families */
+  --ribbon-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --ribbon-font-family-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
+    monospace;
+
+  /* Font Sizes */
+  --ribbon-font-size-xs: 0.75rem;      /* 12px */
+  --ribbon-font-size-sm: 0.875rem;     /* 14px */
+  --ribbon-font-size-base: 1rem;       /* 16px */
+  --ribbon-font-size-lg: 1.125rem;     /* 18px */
+  --ribbon-font-size-xl: 1.25rem;      /* 20px */
+  --ribbon-font-size-2xl: 1.5rem;      /* 24px */
+
+  /* Font Weights */
+  --ribbon-font-weight-light: 300;
+  --ribbon-font-weight-normal: 400;
+  --ribbon-font-weight-medium: 500;
+  --ribbon-font-weight-semibold: 600;
+  --ribbon-font-weight-bold: 700;
+
+  /* Line Heights */
+  --ribbon-line-height-tight: 1.25;
+  --ribbon-line-height-normal: 1.5;
+  --ribbon-line-height-relaxed: 1.625;
+  --ribbon-line-height-loose: 2;
+
+  /* ==================== SPACING ==================== */
+
+  --ribbon-space-0: 0;
+  --ribbon-space-1: 0.25rem;   /* 4px */
+  --ribbon-space-2: 0.5rem;    /* 8px */
+  --ribbon-space-3: 0.75rem;   /* 12px */
+  --ribbon-space-4: 1rem;      /* 16px */
+  --ribbon-space-5: 1.25rem;   /* 20px */
+  --ribbon-space-6: 1.5rem;    /* 24px */
+  --ribbon-space-8: 2rem;      /* 32px */
+  --ribbon-space-10: 2.5rem;   /* 40px */
+  --ribbon-space-12: 3rem;     /* 48px */
+  --ribbon-space-16: 4rem;     /* 64px */
+
+  /* ==================== SIZING ==================== */
+
+  /* Button Sizes */
+  --ribbon-size-button-sm: 1.75rem;    /* 28px */
+  --ribbon-size-button-md: 2rem;       /* 32px */
+  --ribbon-size-button-lg: 2.5rem;     /* 40px */
+
+  /* Icon Sizes */
+  --ribbon-size-icon-xs: 1rem;         /* 16px */
+  --ribbon-size-icon-sm: 1.25rem;      /* 20px */
+  --ribbon-size-icon-md: 1.5rem;       /* 24px */
+  --ribbon-size-icon-lg: 2rem;         /* 32px */
+  --ribbon-size-icon-xl: 2.5rem;       /* 40px */
+
+  /* Component Sizes */
+  --ribbon-size-ribbon-height: 7rem;   /* 112px */
+  --ribbon-size-toolbar-height: 2.5rem; /* 40px */
+  --ribbon-size-tab-height: 2rem;      /* 32px */
+
+  /* ==================== BORDERS ==================== */
+
+  --ribbon-border-radius-none: 0;
+  --ribbon-border-radius-sm: 0.25rem;  /* 4px */
+  --ribbon-border-radius-md: 0.375rem; /* 6px */
+  --ribbon-border-radius-lg: 0.5rem;   /* 8px */
+  --ribbon-border-radius-xl: 0.75rem;  /* 12px */
+  --ribbon-border-radius-full: 9999px;
+
+  --ribbon-border-width-0: 0;
+  --ribbon-border-width-1: 1px;
+  --ribbon-border-width-2: 2px;
+  --ribbon-border-width-3: 3px;
+
+  /* ==================== SHADOWS ==================== */
+
+  --ribbon-shadow-none: none;
+  --ribbon-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ribbon-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --ribbon-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --ribbon-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* ==================== TRANSITIONS ==================== */
+
+  --ribbon-transition-fast: 150ms;
+  --ribbon-transition-base: 200ms;
+  --ribbon-transition-slow: 300ms;
+  --ribbon-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ==================== Z-INDEX ==================== */
+
+  --ribbon-z-dropdown: 100;
+  --ribbon-z-sticky: 20;
+  --ribbon-z-fixed: 30;
+  --ribbon-z-modal-backdrop: 40;
+  --ribbon-z-modal: 50;
+  --ribbon-z-popover: 60;
+  --ribbon-z-tooltip: 70;
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+.ribbon-text-primary {
+  color: var(--ribbon-text-primary);
+}
+
+.ribbon-text-secondary {
+  color: var(--ribbon-text-secondary);
+}
+
+.ribbon-text-disabled {
+  color: var(--ribbon-text-disabled);
+}
+
+.ribbon-bg-primary {
+  background-color: var(--ribbon-bg-primary);
+}
+
+.ribbon-bg-secondary {
+  background-color: var(--ribbon-bg-secondary);
+}
+
+.ribbon-border {
+  border: var(--ribbon-border-width-1) solid var(--ribbon-border-color);
+}
+
+.ribbon-rounded {
+  border-radius: var(--ribbon-border-radius-md);
+}
+
+.ribbon-shadow {
+  box-shadow: var(--ribbon-shadow-md);
+}
+
+.ribbon-transition {
+  transition: all var(--ribbon-transition-base) var(--ribbon-transition-timing);
+}

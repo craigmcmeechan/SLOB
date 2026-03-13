@@ -1,0 +1,317 @@
+<!-- Backstage File Menu -->
+
+<div class="ribbon-backstage ribbon-backstage--open" role="navigation" aria-label="File Menu">
+  <!-- Overlay (click to close) -->
+  <div class="ribbon-backstage_overlay"></div>
+
+  <!-- Main Backstage Container -->
+  <div class="ribbon-backstage_container">
+    <!-- Left Sidebar Navigation -->
+    <aside class="ribbon-backstage_sidebar">
+      <nav class="ribbon-backstage_sidebar_nav">
+        <button class="ribbon-backstage_nav-item ribbon-backstage_nav-item--active" data-category="recent">
+          <span class="ribbon-backstage_nav-icon">📋</span>
+          <span class="ribbon-backstage_nav-label">Recent</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="new">
+          <span class="ribbon-backstage_nav-icon">📄</span>
+          <span class="ribbon-backstage_nav-label">New</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="open">
+          <span class="ribbon-backstage_nav-icon">📂</span>
+          <span class="ribbon-backstage_nav-label">Open</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="save">
+          <span class="ribbon-backstage_nav-icon">💾</span>
+          <span class="ribbon-backstage_nav-label">Save</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="save-as">
+          <span class="ribbon-backstage_nav-icon">💾</span>
+          <span class="ribbon-backstage_nav-label">Save As</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="print">
+          <span class="ribbon-backstage_nav-icon">🖨️</span>
+          <span class="ribbon-backstage_nav-label">Print</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="share">
+          <span class="ribbon-backstage_nav-icon">🔗</span>
+          <span class="ribbon-backstage_nav-label">Share</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="export">
+          <span class="ribbon-backstage_nav-icon">📤</span>
+          <span class="ribbon-backstage_nav-label">Export</span>
+        </button>
+        <hr class="ribbon-backstage_nav-divider" />
+        <button class="ribbon-backstage_nav-item" data-category="account">
+          <span class="ribbon-backstage_nav-icon">👤</span>
+          <span class="ribbon-backstage_nav-label">Account</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="options">
+          <span class="ribbon-backstage_nav-icon">⚙️</span>
+          <span class="ribbon-backstage_nav-label">Options</span>
+        </button>
+        <button class="ribbon-backstage_nav-item" data-category="info">
+          <span class="ribbon-backstage_nav-icon">ℹ️</span>
+          <span class="ribbon-backstage_nav-label">Info</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Right Content Area -->
+    <div class="ribbon-backstage_content">
+      <!-- Recent Documents Section (active) -->
+      <div class="ribbon-backstage_content_section ribbon-backstage_content_section--active" data-category="recent">
+        <h2>Recent Documents</h2>
+        <div class="ribbon-backstage_recent-list">
+          <div class="ribbon-backstage_recent-item">
+            <div class="ribbon-backstage_recent-icon">📄</div>
+            <div class="ribbon-backstage_recent-details">
+              <div class="ribbon-backstage_recent-name">Project Report.docx</div>
+              <div class="ribbon-backstage_recent-path">Documents / Work</div>
+              <div class="ribbon-backstage_recent-date">Today at 2:30 PM</div>
+            </div>
+          </div>
+          <div class="ribbon-backstage_recent-item">
+            <div class="ribbon-backstage_recent-icon">📄</div>
+            <div class="ribbon-backstage_recent-details">
+              <div class="ribbon-backstage_recent-name">Proposal.docx</div>
+              <div class="ribbon-backstage_recent-path">Documents / Proposals</div>
+              <div class="ribbon-backstage_recent-date">Yesterday at 9:15 AM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Templates Section -->
+      <div class="ribbon-backstage_content_section" data-category="new">
+        <h2>Choose a Template</h2>
+        <div class="ribbon-backstage_template-gallery">
+          <div class="ribbon-backstage_template-item">
+            <div class="ribbon-backstage_template-thumbnail">📝</div>
+            <div class="ribbon-backstage_template-name">Blank Document</div>
+          </div>
+          <div class="ribbon-backstage_template-item">
+            <div class="ribbon-backstage_template-thumbnail">📋</div>
+            <div class="ribbon-backstage_template-name">Report</div>
+          </div>
+          <div class="ribbon-backstage_template-item">
+            <div class="ribbon-backstage_template-thumbnail">📊</div>
+            <div class="ribbon-backstage_template-name">Resume</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Section -->
+      <div class="ribbon-backstage_content_section" data-category="account">
+        <h2>Account Information</h2>
+        <div class="ribbon-backstage_account">
+          <div class="ribbon-backstage_account_profile">
+            <div class="ribbon-backstage_account_avatar">👤</div>
+            <div class="ribbon-backstage_account_info">
+              <div class="ribbon-backstage_account_name">User Name</div>
+              <div class="ribbon-backstage_account_email">user@example.com</div>
+            </div>
+          </div>
+          <button class="ribbon-button">Manage Account Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Close Button -->
+  <button class="ribbon-backstage_close" aria-label="Close menu">✕</button>
+</div>
+
+<style>
+.ribbon-backstage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--ribbon-surface);
+  display: none;
+  z-index: 1000;
+}
+
+.ribbon-backstage--open {
+  display: flex;
+}
+
+.ribbon-backstage_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.ribbon-backstage_container {
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.ribbon-backstage_sidebar {
+  width: 200px;
+  background-color: var(--ribbon-surface-variant);
+  border-right: var(--ribbon-border-width) solid var(--ribbon-border);
+  overflow-y: auto;
+  padding: var(--ribbon-padding);
+}
+
+.ribbon-backstage_sidebar_nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-gap);
+}
+
+.ribbon-backstage_nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding) var(--ribbon-padding-md);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--ribbon-border-radius);
+  color: var(--ribbon-text);
+  text-align: left;
+  font-size: var(--ribbon-font-size);
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-backstage_nav-item:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-backstage_nav-item--active {
+  background-color: var(--ribbon-primary);
+  color: white;
+  font-weight: var(--ribbon-font-weight-medium);
+}
+
+.ribbon-backstage_content {
+  flex: 1;
+  padding: var(--ribbon-padding-lg);
+  overflow-y: auto;
+}
+
+.ribbon-backstage_content_section {
+  display: none;
+}
+
+.ribbon-backstage_content_section--active {
+  display: block;
+}
+
+.ribbon-backstage_content_section h2 {
+  font-size: var(--ribbon-font-size-lg);
+  margin-bottom: var(--ribbon-margin);
+  color: var(--ribbon-text);
+}
+
+.ribbon-backstage_recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-gap-md);
+}
+
+.ribbon-backstage_recent-item {
+  display: flex;
+  gap: var(--ribbon-gap-md);
+  padding: var(--ribbon-padding);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  cursor: pointer;
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-backstage_recent-item:hover {
+  background-color: var(--ribbon-surface-hover);
+  border-color: var(--ribbon-primary);
+}
+
+.ribbon-backstage_recent-icon {
+  font-size: 32px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-backstage_recent-name {
+  font-weight: var(--ribbon-font-weight-medium);
+  color: var(--ribbon-text);
+}
+
+.ribbon-backstage_recent-path {
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-secondary);
+}
+
+.ribbon-backstage_recent-date {
+  font-size: var(--ribbon-font-size-xs);
+  color: var(--ribbon-text-muted);
+}
+
+.ribbon-backstage_template-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--ribbon-gap-lg);
+}
+
+.ribbon-backstage_template-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding-md);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius-md);
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-backstage_template-item:hover {
+  border-color: var(--ribbon-primary);
+  box-shadow: var(--ribbon-shadow);
+}
+
+.ribbon-backstage_template-thumbnail {
+  font-size: 48px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ribbon-backstage_template-name {
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text);
+  font-weight: var(--ribbon-font-weight-medium);
+}
+
+.ribbon-backstage_close {
+  position: fixed;
+  top: var(--ribbon-padding);
+  right: var(--ribbon-padding);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--ribbon-font-size-lg);
+  color: var(--ribbon-text);
+  z-index: 1002;
+}
+
+.ribbon-backstage_close:hover {
+  color: var(--ribbon-primary);
+}
+</style>

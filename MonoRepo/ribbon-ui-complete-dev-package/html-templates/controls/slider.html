@@ -1,0 +1,55 @@
+<!-- Slider Control -->
+
+<input type="range" class="ribbon-slider" min="0" max="100" value="50" />
+
+<div class="ribbon-slider-labeled">
+  <label>Volume:</label>
+  <input type="range" class="ribbon-slider" min="0" max="100" value="75" />
+  <span class="ribbon-slider-value">75%</span>
+</div>
+
+<style>
+.ribbon-slider {
+  width: 200px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--ribbon-primary) 50%, var(--ribbon-border) 50%);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ribbon-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ribbon-primary);
+  cursor: pointer;
+  box-shadow: var(--ribbon-shadow);
+}
+
+.ribbon-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ribbon-primary);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--ribbon-shadow);
+}
+
+.ribbon-slider-labeled {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap-md);
+}
+
+.ribbon-slider-value {
+  min-width: 40px;
+  text-align: right;
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-secondary);
+}
+</style>

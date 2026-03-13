@@ -1,0 +1,46 @@
+<!-- Toggle Button Control -->
+
+<!-- Inactive Toggle -->
+<button class="ribbon-toggle-button" aria-pressed="false">
+  <span class="ribbon-toggle-button_icon">📌</span>
+  <span class="ribbon-toggle-button_label">Pin</span>
+</button>
+
+<!-- Active Toggle -->
+<button class="ribbon-toggle-button ribbon-toggle-button--active" aria-pressed="true">
+  <span class="ribbon-toggle-button_icon">📌</span>
+  <span class="ribbon-toggle-button_label">Pin</span>
+</button>
+
+<style>
+.ribbon-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding) calc(var(--ribbon-padding) * 1.5);
+  background-color: var(--ribbon-surface);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  color: var(--ribbon-text);
+  font-size: var(--ribbon-font-size);
+  cursor: pointer;
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-toggle-button:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-toggle-button--active {
+  background-color: var(--ribbon-primary);
+  border-color: var(--ribbon-primary);
+  color: white;
+}
+
+.ribbon-toggle-button_icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+</style>

@@ -1,0 +1,40 @@
+<!-- Control Group Container -->
+
+<fieldset class="ribbon-control-group">
+  <legend class="ribbon-control-group_label">Options</legend>
+  
+  <label class="ribbon-checkbox">
+    <input type="checkbox" />
+    <span class="ribbon-checkbox_box"></span>
+    <span>Option 1</span>
+  </label>
+
+  <label class="ribbon-checkbox">
+    <input type="checkbox" checked />
+    <span class="ribbon-checkbox_box">✓</span>
+    <span>Option 2</span>
+  </label>
+
+  <label class="ribbon-checkbox">
+    <input type="checkbox" />
+    <span class="ribbon-checkbox_box"></span>
+    <span>Option 3</span>
+  </label>
+</fieldset>
+
+<style>
+.ribbon-control-group {
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  padding: var(--ribbon-padding-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ribbon-gap);
+}
+
+.ribbon-control-group_label {
+  font-weight: var(--ribbon-font-weight-semibold);
+  font-size: var(--ribbon-font-size-sm);
+  color: var(--ribbon-text-secondary);
+}
+</style>

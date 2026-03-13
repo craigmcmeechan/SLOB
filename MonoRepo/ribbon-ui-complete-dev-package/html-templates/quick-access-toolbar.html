@@ -1,0 +1,205 @@
+<!-- Quick Access Toolbar -->
+
+<div class="ribbon-quick-access-toolbar ribbon-qat--titlebar">
+  <div class="ribbon-qat_buttons">
+    <!-- Save Button -->
+    <button class="ribbon-qat_button" id="qat-save" title="Save (Ctrl+S)" aria-label="Save">
+      <span class="ribbon-qat_button_icon">💾</span>
+      <span class="ribbon-qat_button_label">Save</span>
+    </button>
+
+    <!-- Undo Button -->
+    <button class="ribbon-qat_button" id="qat-undo" title="Undo (Ctrl+Z)" aria-label="Undo">
+      <span class="ribbon-qat_button_icon">↶</span>
+      <span class="ribbon-qat_button_label">Undo</span>
+    </button>
+
+    <!-- Redo Button -->
+    <button class="ribbon-qat_button" id="qat-redo" title="Redo (Ctrl+Y)" aria-label="Redo">
+      <span class="ribbon-qat_button_icon">↷</span>
+      <span class="ribbon-qat_button_label">Redo</span>
+    </button>
+
+    <!-- Divider -->
+    <div class="ribbon-qat_separator"></div>
+
+    <!-- Print Button -->
+    <button class="ribbon-qat_button" id="qat-print" title="Print (Ctrl+P)" aria-label="Print">
+      <span class="ribbon-qat_button_icon">🖨️</span>
+      <span class="ribbon-qat_button_label">Print</span>
+    </button>
+
+    <!-- Customize Button -->
+    <button class="ribbon-qat_button ribbon-qat_button--customize" id="qat-customize" title="Customize Quick Access Toolbar" aria-label="Customize">
+      <span class="ribbon-qat_button_icon">⋮</span>
+    </button>
+  </div>
+
+  <!-- Customize Menu (hidden by default) -->
+  <div class="ribbon-qat_customize-menu" id="qat-customize-menu">
+    <label class="ribbon-qat_customize-item">
+      <input type="checkbox" checked />
+      <span>Save</span>
+    </label>
+    <label class="ribbon-qat_customize-item">
+      <input type="checkbox" checked />
+      <span>Undo</span>
+    </label>
+    <label class="ribbon-qat_customize-item">
+      <input type="checkbox" checked />
+      <span>Redo</span>
+    </label>
+    <label class="ribbon-qat_customize-item">
+      <input type="checkbox" checked />
+      <span>Print</span>
+    </label>
+    <hr />
+    <label class="ribbon-qat_customize-item">
+      <input type="checkbox" />
+      <span>Print Preview</span>
+    </label>
+    <label class="ribbon-qat_customize-item">
+      <input type="checkbox" />
+      <span>Open</span>
+    </label>
+    <hr />
+    <button class="ribbon-qat_customize-item ribbon-qat_customize-item--text">More Commands...</button>
+    <button class="ribbon-qat_customize-item ribbon-qat_customize-item--text">Show Below Ribbon</button>
+    <button class="ribbon-qat_customize-item ribbon-qat_customize-item--text">Reset</button>
+  </div>
+</div>
+
+<style>
+.ribbon-quick-access-toolbar {
+  display: flex;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding-sm);
+  background-color: var(--ribbon-surface-variant);
+  border-bottom: var(--ribbon-border-width) solid var(--ribbon-border);
+  height: 32px;
+  align-items: center;
+}
+
+.ribbon-qat--titlebar {
+  position: absolute;
+  top: 32px;
+  left: var(--ribbon-padding);
+  border: none;
+  background: transparent;
+  border-bottom: none;
+  padding: 0;
+  gap: var(--ribbon-gap-sm);
+}
+
+.ribbon-qat_buttons {
+  display: flex;
+  gap: var(--ribbon-gap-sm);
+  align-items: center;
+}
+
+.ribbon-qat_button {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap-sm);
+  padding: var(--ribbon-padding-sm) var(--ribbon-padding);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--ribbon-border-radius);
+  color: var(--ribbon-text);
+  font-size: var(--ribbon-font-size-sm);
+  transition: all var(--ribbon-transition-fast);
+}
+
+.ribbon-qat_button:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-qat_button:active {
+  background-color: var(--ribbon-surface-active);
+}
+
+.ribbon-qat_button:focus {
+  outline: 2px solid var(--ribbon-primary);
+  outline-offset: -2px;
+}
+
+.ribbon-qat_button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon-qat_button--customize {
+  margin-left: var(--ribbon-gap);
+}
+
+.ribbon-qat_button_icon {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.ribbon-qat_button_label {
+  white-space: nowrap;
+  font-size: var(--ribbon-font-size-xs);
+}
+
+.ribbon-qat_separator {
+  width: 1px;
+  height: 16px;
+  background-color: var(--ribbon-border);
+  margin: 0 var(--ribbon-gap-sm);
+}
+
+.ribbon-qat_customize-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--ribbon-surface);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  box-shadow: var(--ribbon-shadow-md);
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.ribbon-qat_customize-menu.active {
+  display: flex;
+}
+
+.ribbon-qat_customize-item {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding) var(--ribbon-padding-md);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--ribbon-font-size-sm);
+  text-align: left;
+  transition: background-color var(--ribbon-transition-fast);
+}
+
+.ribbon-qat_customize-item:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-qat_customize-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.ribbon-qat_customize-item--text {
+  color: var(--ribbon-primary);
+  font-weight: var(--ribbon-font-weight-medium);
+}
+
+.ribbon-qat_customize-menu hr {
+  margin: var(--ribbon-gap-sm) 0;
+  border: none;
+  border-top: var(--ribbon-border-width) solid var(--ribbon-border);
+}
+</style>

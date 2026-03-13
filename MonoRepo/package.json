@@ -1,0 +1,23 @@
+{
+  "name": "manufacturing-mes",
+  "version": "0.1.0",
+  "description": "Manufacturing Execution System with Ribbon UI",
+  "private": true,
+  "workspaces": [
+    "packages/ui-components/ribbon-ui",
+    "packages/shared",
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "storybook": "cd packages/ui-components/ribbon-ui && pnpm storybook",
+    "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "pnpm": "^9.0.0"
+  }
+}

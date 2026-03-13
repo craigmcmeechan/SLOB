@@ -1,0 +1,63 @@
+<!-- Dropdown Button Control -->
+
+<div class="ribbon-dropdown">
+  <button class="ribbon-button ribbon-dropdown_trigger">
+    Options ▼
+  </button>
+  <div class="ribbon-dropdown_menu">
+    <div class="ribbon-dropdown_item">Item 1</div>
+    <div class="ribbon-dropdown_item ribbon-dropdown_item--selected">Item 2</div>
+    <div class="ribbon-dropdown_item">Item 3</div>
+    <div class="ribbon-dropdown_divider"></div>
+    <div class="ribbon-dropdown_item">Item 4</div>
+  </div>
+</div>
+
+<style>
+.ribbon-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.ribbon-dropdown_trigger {
+  cursor: pointer;
+}
+
+.ribbon-dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  background-color: var(--ribbon-surface);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  box-shadow: var(--ribbon-shadow-md);
+  z-index: 100;
+  display: none;
+}
+
+.ribbon-dropdown:hover .ribbon-dropdown_menu {
+  display: block;
+}
+
+.ribbon-dropdown_item {
+  padding: var(--ribbon-padding) var(--ribbon-padding-md);
+  cursor: pointer;
+  transition: background-color var(--ribbon-transition-fast);
+}
+
+.ribbon-dropdown_item:hover {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-dropdown_item--selected {
+  background-color: var(--ribbon-primary);
+  color: white;
+}
+
+.ribbon-dropdown_divider {
+  height: 1px;
+  background-color: var(--ribbon-border);
+  margin: var(--ribbon-gap-sm) 0;
+}
+</style>

@@ -1,0 +1,70 @@
+<!-- Checkbox Control -->
+
+<!-- Unchecked -->
+<label class="ribbon-checkbox">
+  <input type="checkbox" class="ribbon-checkbox_input" />
+  <span class="ribbon-checkbox_box"></span>
+  <span class="ribbon-checkbox_label">Unchecked</span>
+</label>
+
+<!-- Checked -->
+<label class="ribbon-checkbox">
+  <input type="checkbox" class="ribbon-checkbox_input" checked />
+  <span class="ribbon-checkbox_box">✓</span>
+  <span class="ribbon-checkbox_label">Checked</span>
+</label>
+
+<!-- Disabled -->
+<label class="ribbon-checkbox ribbon-checkbox--disabled">
+  <input type="checkbox" class="ribbon-checkbox_input" disabled />
+  <span class="ribbon-checkbox_box"></span>
+  <span class="ribbon-checkbox_label">Disabled</span>
+</label>
+
+<style>
+.ribbon-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ribbon-checkbox_input {
+  display: none;
+}
+
+.ribbon-checkbox_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius-sm);
+  background-color: var(--ribbon-surface);
+  transition: all var(--ribbon-transition-fast);
+  flex-shrink: 0;
+}
+
+.ribbon-checkbox_input:checked ~ .ribbon-checkbox_box {
+  background-color: var(--ribbon-primary);
+  border-color: var(--ribbon-primary);
+  color: white;
+  font-weight: bold;
+}
+
+.ribbon-checkbox_input:focus ~ .ribbon-checkbox_box {
+  outline: 2px solid var(--ribbon-primary);
+  outline-offset: 2px;
+}
+
+.ribbon-checkbox--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon-checkbox_label {
+  font-size: var(--ribbon-font-size);
+}
+</style>

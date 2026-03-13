@@ -1,0 +1,97 @@
+<!-- Button Control -->
+
+<!-- Basic Button -->
+<button class="ribbon-button">Button</button>
+
+<!-- Primary Button -->
+<button class="ribbon-button ribbon-button--primary">Primary</button>
+
+<!-- Button with Icon -->
+<button class="ribbon-button">
+  <span class="ribbon-button_icon">💾</span>
+  <span class="ribbon-button_label">Save</span>
+</button>
+
+<!-- Disabled Button -->
+<button class="ribbon-button ribbon-button--disabled" disabled>
+  Disabled
+</button>
+
+<!-- Small Button -->
+<button class="ribbon-button ribbon-button--small">Small</button>
+
+<!-- Large Button -->
+<button class="ribbon-button ribbon-button--large">Large</button>
+
+<style>
+.ribbon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding) calc(var(--ribbon-padding) * 1.5);
+  background-color: var(--ribbon-surface);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  color: var(--ribbon-text);
+  font-size: var(--ribbon-font-size);
+  font-weight: var(--ribbon-font-weight-medium);
+  cursor: pointer;
+  transition: all var(--ribbon-transition-fast);
+  user-select: none;
+}
+
+.ribbon-button:hover:not(.ribbon-button--disabled) {
+  background-color: var(--ribbon-surface-hover);
+  border-color: var(--ribbon-border-dark);
+}
+
+.ribbon-button:active:not(.ribbon-button--disabled) {
+  background-color: var(--ribbon-surface-active);
+}
+
+.ribbon-button:focus {
+  outline: 2px solid var(--ribbon-primary);
+  outline-offset: 2px;
+}
+
+.ribbon-button--primary {
+  background-color: var(--ribbon-primary);
+  border-color: var(--ribbon-primary);
+  color: white;
+}
+
+.ribbon-button--primary:hover {
+  background-color: var(--ribbon-primary-hover);
+  border-color: var(--ribbon-primary-hover);
+}
+
+.ribbon-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon-button--small {
+  padding: var(--ribbon-padding-sm) var(--ribbon-padding);
+  font-size: var(--ribbon-font-size-sm);
+  height: 20px;
+}
+
+.ribbon-button--large {
+  padding: var(--ribbon-padding-md) var(--ribbon-padding-lg);
+  font-size: var(--ribbon-font-size-md);
+  height: 32px;
+}
+
+.ribbon-button_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.ribbon-button_label {
+  white-space: nowrap;
+}
+</style>

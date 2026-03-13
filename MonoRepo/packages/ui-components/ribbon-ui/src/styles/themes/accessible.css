@@ -1,0 +1,92 @@
+/* ============================================================================
+   Accessible Theme - High Contrast WCAG AAA
+   ============================================================================ */
+
+.ribbon-theme-accessible {
+  color-scheme: light;
+
+  /* High Contrast Primary Colors */
+  --ribbon-primary: #000000;
+  --ribbon-primary-hover: #1a1a1a;
+  --ribbon-primary-active: #333333;
+
+  /* High Contrast Background Colors */
+  --ribbon-bg-primary: #ffffff;
+  --ribbon-bg-secondary: #f0f0f0;
+  --ribbon-bg-tertiary: #e0e0e0;
+  --ribbon-bg-hover: #d0d0d0;
+  --ribbon-bg-active: #c0c0c0;
+
+  /* High Contrast Border Colors */
+  --ribbon-border-color: #000000;
+  --ribbon-border-color-light: #333333;
+  --ribbon-border-color-dark: #000000;
+
+  /* High Contrast Text Colors */
+  --ribbon-text-primary: #000000;
+  --ribbon-text-secondary: #333333;
+  --ribbon-text-tertiary: #666666;
+  --ribbon-text-disabled: #999999;
+  --ribbon-text-inverse: #ffffff;
+
+  /* High Contrast Accent Colors */
+  --ribbon-accent: #ff0000;
+  --ribbon-accent-hover: #cc0000;
+
+  /* High Contrast Status Colors */
+  --ribbon-success: #008000;
+  --ribbon-warning: #ff8c00;
+  --ribbon-error: #ff0000;
+  --ribbon-info: #0000ff;
+
+  /* Focus Colors (more prominent) */
+  --ribbon-focus-color: #0000ff;
+  --ribbon-focus-shadow: 0 0 0 3px #ffff00;
+
+  /* Increased Border Width for Visibility */
+  --ribbon-border-width-base: 2px;
+
+  /* Enhanced Shadows */
+  --ribbon-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  --ribbon-shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.6);
+  --ribbon-shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.7);
+}
+
+/* Accessible theme inherited globally */
+html.ribbon-accessible,
+body.ribbon-accessible,
+.ribbon-accessible {
+  color-scheme: light;
+  --ribbon-primary: #000000;
+  --ribbon-primary-hover: #1a1a1a;
+  --ribbon-primary-active: #333333;
+  --ribbon-bg-primary: #ffffff;
+  --ribbon-bg-secondary: #f0f0f0;
+  --ribbon-bg-tertiary: #e0e0e0;
+  --ribbon-bg-hover: #d0d0d0;
+  --ribbon-bg-active: #c0c0c0;
+  --ribbon-border-color: #000000;
+  --ribbon-border-color-light: #333333;
+  --ribbon-border-color-dark: #000000;
+  --ribbon-text-primary: #000000;
+  --ribbon-text-secondary: #333333;
+  --ribbon-text-tertiary: #666666;
+  --ribbon-text-disabled: #999999;
+  --ribbon-text-inverse: #ffffff;
+  --ribbon-focus-color: #0000ff;
+  --ribbon-focus-shadow: 0 0 0 3px #ffff00;
+  --ribbon-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  --ribbon-shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.6);
+  --ribbon-shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.7);
+}
+
+/* Enhanced focus for accessibility */
+.ribbon-accessible *:focus-visible {
+  outline: 3px solid var(--ribbon-focus-color);
+  outline-offset: 2px;
+}
+
+.ribbon-accessible button:focus-visible,
+.ribbon-accessible [role="button"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--ribbon-focus-color), 0 0 0 6px var(--ribbon-focus-shadow);
+}

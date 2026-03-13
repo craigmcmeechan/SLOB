@@ -1,0 +1,109 @@
+<!-- Button Component Template -->
+
+<!-- Basic Button -->
+<button
+  class="ribbon-button"
+  role="button"
+  aria-label="Click me"
+>
+  <span class="ribbon-button_icon">📝</span>
+  <span class="ribbon-button_label">Button</span>
+</button>
+
+<!-- Primary Variant -->
+<button
+  class="ribbon-button ribbon-button--primary"
+  role="button"
+  aria-label="Primary action"
+>
+  <span class="ribbon-button_label">Primary</span>
+</button>
+
+<!-- Disabled State -->
+<button
+  class="ribbon-button ribbon-button--disabled"
+  role="button"
+  aria-label="Disabled button"
+  aria-disabled="true"
+  disabled
+>
+  <span class="ribbon-button_label">Disabled</span>
+</button>
+
+<!-- Small Size -->
+<button class="ribbon-button ribbon-button--small">
+  Small
+</button>
+
+<!-- Large Size -->
+<button class="ribbon-button ribbon-button--large">
+  Large
+</button>
+
+<!-- CSS -->
+<style>
+.ribbon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ribbon-gap);
+  padding: var(--ribbon-padding) calc(var(--ribbon-padding) * 1.5);
+  background-color: var(--ribbon-surface);
+  border: var(--ribbon-border-width) solid var(--ribbon-border);
+  border-radius: var(--ribbon-border-radius);
+  color: var(--ribbon-text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.ribbon-button:hover:not(.ribbon-button--disabled) {
+  background-color: var(--ribbon-surface-hover);
+}
+
+.ribbon-button:focus {
+  outline: 2px solid var(--ribbon-primary);
+  outline-offset: 2px;
+}
+
+.ribbon-button--primary {
+  background-color: var(--ribbon-primary);
+  border-color: var(--ribbon-primary);
+  color: white;
+}
+
+.ribbon-button--primary:hover {
+  background-color: var(--ribbon-primary-hover);
+}
+
+.ribbon-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ribbon-button--small {
+  padding: 4px 8px;
+  font-size: 11px;
+  min-height: 20px;
+}
+
+.ribbon-button--large {
+  padding: 12px 16px;
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.ribbon-button_icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ribbon-button_label {
+  white-space: nowrap;
+}
+</style>

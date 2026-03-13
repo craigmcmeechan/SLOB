@@ -1,0 +1,71 @@
+{
+  "ribbon": {
+    "home": "Startseite",
+    "insert": "Einfügen",
+    "design": "Entwurf",
+    "layout": "Seitenlayout",
+    "references": "Verweise",
+    "mailings": "Seriendruck",
+    "review": "Überprüfen",
+    "view": "Ansicht",
+    "help": "Hilfe"
+  },
+  "ribbonGroups": {
+    "clipboard": "Zwischenablage",
+    "font": "Schrift",
+    "paragraph": "Absatz",
+    "styles": "Formatvorlagen",
+    "editing": "Bearbeitung"
+  },
+  "controls": {
+    "paste": "Einfügen",
+    "cut": "Ausschneiden",
+    "copy": "Kopieren",
+    "format": "Format",
+    "clear": "Löschen",
+    "undo": "Rückgängig",
+    "redo": "Wiederherstellen",
+    "save": "Speichern",
+    "open": "Öffnen",
+    "new": "Neu",
+    "print": "Drucken",
+    "close": "Schließen",
+    "exit": "Beenden"
+  },
+  "manufacturing": {
+    "quote": "Angebot",
+    "job": "Auftrag",
+    "production": "Produktion",
+    "delivery": "Lieferung",
+    "finance": "Finanzen",
+    "specification": "Spezifikation",
+    "batchManagement": "Chargenverwaltung",
+    "scheduling": "Planung",
+    "qualityControl": "Qualitätskontrolle",
+    "inventory": "Bestand"
+  },
+  "messages": {
+    "welcome": "Willkommen bei Ribbon UI",
+    "loading": "Wird geladen...",
+    "saving": "Wird gespeichert...",
+    "saved": "Erfolgreich gespeichert",
+    "error": "Ein Fehler ist aufgetreten",
+    "warning": "Warnung",
+    "info": "Informationen",
+    "success": "Erfolg",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "yes": "Ja",
+    "no": "Nein",
+    "ok": "OK"
+  },
+  "accessibility": {
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "toggleSidebar": "Seitenleiste umschalten",
+    "collapseRibbon": "Menüband reduzieren",
+    "expandRibbon": "Menüband erweitern",
+    "focusContent": "Fokus auf Hauptinhalt",
+    "skipToContent": "Zum Hauptinhalt springen"
+  }
+}
